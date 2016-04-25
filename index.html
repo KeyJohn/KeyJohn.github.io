@@ -423,162 +423,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/15/如何追踪app崩溃率，如何解决线上闪退/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-15T18:00:24+08:00" content="2016-04-15">
-              2016-04-15
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/15/如何追踪app崩溃率，如何解决线上闪退/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/15/如何追踪app崩溃率，如何解决线上闪退/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>##如何追踪app崩溃率，如何解决线上闪退</p>
-<p>转载自这里:<a href="http://www.cocoachina.com/ios/20160414/15918.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20160414/15918.html</a></p>
-<hr>
-<p>当iOS设备上的App应用闪退时，操作系统会生成一个crash日志，保存在设备上。crash日志上有很多有用的信息，比如每个正在执行线程的完整堆栈跟踪信息和内存映像，这样就能够通过解析这些信息进而定位crash发生时的代码逻辑，从而找到App闪退的原因。通常来说，crash产生来源于两种问题：违反iOS系统规则导致的crash和App代码逻辑BUG导致的crash，下面分别对他们进行分析。</p>
-<p><strong>违反iOS系统规则产生crash的三种类型：</strong></p>
-<p>(1) 内存报警闪退</p>
-<p>当iOS检测到内存过低时，它的VM系统会发出低内存警告通知，尝试回收一些内存；如果情况没有得到足够的改善，iOS会终止后台应用以回收更多内存；最后，如果内存还是不足，那么正在运行的应用可能会被终止掉。在Debug模式下，可以主动将客户端执行的动作逻辑写入一个log文件中，这样程序童鞋可以将内存预警的逻辑写入该log文件，当发生如下截图中的内存报警时，就是提醒当前客户端性能内存吃紧，可以通过Instruments工具中的Allocations 和 Leaks模块库来发现内存分配问题和内存泄漏问题。</p>
-<p>(2) 响应超时</p>
-<p>当应用程序对一些特定的事件（比如启动、挂起、恢复、结束）响应不及时，苹果的Watchdog机制会把应用程序干掉，并生成一份相应的crash日志。这些事件与下列UIApplicationDelegate方法相对应，当遇到Watchdog日志时，可以检查上图中的几个方法是否有比较重的阻塞UI的动作。</p>
-<pre><code>application:didFinishLaunchingWithOptions:
-applicationWillResignActive:
-applicationDidEnterBackground:
-applicationWillEnterForeground:
-applicationDidBecomeActive:
-applicationWillTerminate:
-</code></pre><p>(3) 用户强制退出</p>
-<p>一看到“用户强制退出”，首先可能想到的双击Home键，然后关闭应用程序。不过这种场景一般是不会产生crash日志的，因为双击Home键后，所有的应用程序都处于后台状态，而iOS随时都有可能关闭后台进程，当应用阻塞界面并停止响应时这种场景才会产生crash日志。这里指的“用户强制退出”场景，是稍微比较复杂点的操作：先按住电源键，直到出现“滑动关机”的界面时，再按住Home键，这时候当前应用程序会被终止掉，并且产生一份相应事件的crash日志。</p>
-<p><strong>应用逻辑的Bug</strong></p>
-<p>大多数闪退崩溃日志的产生都是因为应用中的Bug，这种Bug的错误种类有很多，比如：</p>
-<ul>
-<li>SEGV：（Segmentation Violation，段违例），无效内存地址，比如空指针，未初始化指针，栈溢出等；</li>
-<li>SIGABRT：收到Abort信号，可能自身调用abort()或者收到外部发送过来的信号；</li>
-<li>SIGBUS：总线错误。与SIGSEGV不同的是，SIGSEGV访问的是无效地址（比如虚存映射不到物理内存），而SIGBUS访问的是有效地址，但总线访问异常（比如地址对齐问题）；</li>
-<li>SIGILL：尝试执行非法的指令，可能不被识别或者没有权限；</li>
-<li>SIGFPE：Floating Point Error，数学计算相关问题（可能不限于浮点计算），比如除零操作；</li>
-<li>SIGPIPE：管道另一端没有进程接手数据；</li>
-</ul>
-<p>常见的崩溃原因基本都是代码逻辑问题或资源问题，比如数组越界，访问野指针或者资源不存在，或资源大小写错误等。</p>
-<p><strong>crash的收集</strong></p>
-<p>如果是在windows上你可以通过itools或pp助手等辅助工具查看系统产生的历史crash日志，然后再根据app来查看。如果是在Mac 系统上，只需要打开xcode-&gt;windows-&gt;devices，选择device logs进行查看，如下图，这些crash文件都可以导出来，然后再单独对这个crash文件做处理分析。</p>
-<p><img src="http://cc.cocimg.com/api/uploads/20160413/1460532544744038.jpg =500x" alt=""></p>
-<p>市场上已有的商业软件提供crash收集服务，这些软件基本都提供了日志存储，日志符号化解析和服务端可视化管理等服务：</p>
-<ul>
-<li><a href="http://www.crashlytics.com" target="_blank" rel="external">Crashlytics</a></li>
-<li><a href="http://www.crittercism.com" target="_blank" rel="external">Crittercism</a></li>
-<li><a href="http://www.bugsense.com" target="_blank" rel="external">Bugsense</a></li>
-<li><a href="http://www.hockeyapp.net" target="_blank" rel="external">HockeyApp</a></li>
-<li><a href="http://www.flurry.com" target="_blank" rel="external">Flurry</a></li>
-</ul>
-<p>开源的软件也可以拿来收集crash日志，比如Razor,QuincyKit（git链接）等，这些软件收集crash的原理其实大同小异，都是根据系统产生的crash日志进行了一次提取或封装，然后将封装后的crash文件上传到对应的服务端进行解析处理。很多商业软件都采用了Plcrashreporter这个开源工具来上传和解析crash，比如HockeyApp,Flurry和crittercism等。</p>
-<p><img src="http://cc.cocimg.com/api/uploads/20160413/1460532651476437.jpg =500x" alt=""></p>
-<p>由于自己的crash信息太长，找了一张示例：</p>
-<ol>
-<li><p>crash标识是应用进程产生crash时的一些标识信息，它描述了该crash的唯一标识（E838FEFB-ECF6-498C-8B35-D40F0F9FEAE4），所发生的硬件设备类型（iphone3,1代表iphone4），以及App进程相关的信息等；</p>
-</li>
-<li><p>基本信息描述的是crash发生的时间和系统版本；</p>
-</li>
-<li><p>异常类型描述的是crash发生时抛出的异常类型和错误码；</p>
-</li>
-<li><p>线程回溯描述了crash发生时所有线程的回溯信息，每个线程在每一帧对应的函数调用信息（这里由于空间限制没有全部列出）；</p>
-</li>
-<li><p>二进制映像是指crash发生时已加载的二进制文件。以上就是一份crash日志包含的所有信息，接下来就需要根据这些信息去解析定位导致crash发生的代码逻辑， 这就需要用到符号化解析的过程（洋名叫：symbolication)。</p>
-</li>
-</ol>
-<p><strong>解决线上闪退</strong></p>
-<p>首先保证，发布前充分测试。发布后依然有闪退现象，查看崩溃日志，及时修复并发布。</p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/02/24/mac 10.11 U盘启动盘制作/" itemprop="url">
                   Mac 10.11 El capitan U盘启动盘制作
                 </a>
@@ -637,9 +481,8 @@ applicationWillTerminate:
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Capitan --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app --nointeraction</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<pre><code>![](http://7xlyxy.com1.z0.glb.clouddn.com/Snip20160112_1.png)
-
-输入密码，拷贝完成就ok了！
+<p><img src="http://7xlyxy.com1.z0.glb.clouddn.com/Snip20160112_1.png" alt=""></p>
+<pre><code>输入密码，拷贝完成就ok了！
 </code></pre>
           
         
@@ -1356,7 +1199,7 @@ applicationWillTerminate:
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
