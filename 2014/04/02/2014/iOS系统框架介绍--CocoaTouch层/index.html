@@ -1,0 +1,671 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="iOS 操作系统是 iPhone、 iPod touch 以及 iPad 设备的核心。作为一名iOS开发工程师，很有必要去对iOS平台进行一定的了解，构建 iOS 平台的知识与 Mac OS X 系统同出一辙，iOS 平台的许多开发工具和开发技术也源自 Mac OS X。但开发者无须具备 Mac OS X 开发经验就可以编写 iOS 应用程序。iPhone 软件开发包（SDK）为着手创建 iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS系统框架介绍--CocoaTouch层">
+<meta property="og:url" content="http://yoursite.com/2014/04/02/2014/iOS系统框架介绍--CocoaTouch层/index.html">
+<meta property="og:site_name" content="keyzhang">
+<meta property="og:description" content="iOS 操作系统是 iPhone、 iPod touch 以及 iPad 设备的核心。作为一名iOS开发工程师，很有必要去对iOS平台进行一定的了解，构建 iOS 平台的知识与 Mac OS X 系统同出一辙，iOS 平台的许多开发工具和开发技术也源自 Mac OS X。但开发者无须具备 Mac OS X 开发经验就可以编写 iOS 应用程序。iPhone 软件开发包（SDK）为着手创建 iOS">
+<meta property="og:image" content="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/78383844.jpg">
+<meta property="og:updated_time" content="2014-04-01T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS系统框架介绍--CocoaTouch层">
+<meta name="twitter:description" content="iOS 操作系统是 iPhone、 iPod touch 以及 iPad 设备的核心。作为一名iOS开发工程师，很有必要去对iOS平台进行一定的了解，构建 iOS 平台的知识与 Mac OS X 系统同出一辙，iOS 平台的许多开发工具和开发技术也源自 Mac OS X。但开发者无须具备 Mac OS X 开发经验就可以编写 iOS 应用程序。iPhone 软件开发包（SDK）为着手创建 iOS">
+<meta name="twitter:image" content="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/78383844.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> iOS系统框架介绍--CocoaTouch层 | keyzhang </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a178e1666ee6159ce095ddb1e4d1230d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">keyzhang</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">业精于勤荒于嬉，行成于思毁于随</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS系统框架介绍--CocoaTouch层
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-04-02T00:00:00+08:00" content="2014-04-02">
+              2014-04-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/04/02/2014/iOS系统框架介绍--CocoaTouch层/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/04/02/2014/iOS系统框架介绍--CocoaTouch层/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>iOS 操作系统是 iPhone、 iPod touch 以及 iPad 设备的核心。作为一名iOS开发工程师，很有必要去对iOS平台进行一定的了解，构建 iOS 平台的知识与 Mac OS X 系统同出一辙，iOS 平台的许多开发工具和开发技术也源自 Mac OS X。但开发者无须具备 Mac OS X 开发经验就可以编写 iOS 应用程序。iPhone 软件开发包（SDK）为着手创建 iOS 应用程序提供所需要的一切。</p>
+<a id="more"></a>
+<p>我们首先来看看iOS系统构架图：<br><img src="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/78383844.jpg" alt=""></p>
+<p>从图中我们可以看出iOS实现可以看作是多个层的集合，底层为所有应用程序提供基础服务，高层则包含一些复杂巧妙的服务和技术。接下来，我们相对应的层次看看都有哪些系统框架，并逐渐了解这些系统框架。</p>
+<h3 id="Cocoa-Touch层："><a href="#Cocoa-Touch层：" class="headerlink" title="Cocoa Touch层："></a>Cocoa Touch层：</h3><h5 id="Address-Book-UI-框架"><a href="#Address-Book-UI-框架" class="headerlink" title="Address Book UI 框架"></a>Address Book UI 框架</h5><p>Address Book UI 框架(AddressBookUI.framework)是一套Objective-C的编程接口，可以显示创建或者编辑联系人的标准系统界面。该框架简化了应用程序显示联系人信息所需的工作，另外它也可以确保应用程序使用的界面和其他应用程序相同，进而保证跨平台一致性。</p>
+<h5 id="Event-Kit-UI-框架"><a href="#Event-Kit-UI-框架" class="headerlink" title="Event Kit UI 框架"></a>Event Kit UI 框架</h5><p>iOS 4.0引入了Event Kit UI框架（EventKitUI.framework），它提供一个视图控制键可以展现查看并编辑事件的标准系统界面。Event Kit框架（查看“Event Kit框架”可获得该框架的进一步信息）的事件数据是该框架的构建基础。</p>
+<h5 id="Game-Kit-框架"><a href="#Game-Kit-框架" class="headerlink" title="Game Kit 框架"></a>Game Kit 框架</h5><p>iOS 3.0引入了Game Kit框架(GameKit.framework)。该框架支持点对点连接及游戏内语音功能，您可以通过该框架为应用程序增加点对点网络功能。点对点连接以及游戏内语音功能在多玩家的游戏中非常普遍，不过您也可以考虑将其加入到非游戏应用程序。此框架通过一组建构于Bonjour之上的简单而强大的类提供网络功能，这些类将许多网络细节抽象出来，从而让没有网络编程经验的开发者可以更加容易地将网络功能整合到应用程序。</p>
+<h5 id="iAd-框架"><a href="#iAd-框架" class="headerlink" title="iAd 框架"></a>iAd 框架</h5><p>iOS 4.0引入了iAd框架 (iAd.framework)。您可以通过该框架在应用程序中发布横幅广告。广告会被放入到标准视图，您可以将这些视图加入到用户界面，并在合适的时机向用户展现。这些视图和苹果的公告服务相互协作，自动处理广告内容的加载和展现，同时也可以响应用户对广告的点击。</p>
+<h5 id="Map-Kit-框架"><a href="#Map-Kit-框架" class="headerlink" title="Map Kit 框架"></a>Map Kit 框架</h5><p>iOS 3.0导入了 Map Kit框架 (MapKit.framework) ，该框架供一个可被嵌入到应用程序的地图界面，该界面包含一个可以滚动的地图视图。您可以在视图中添加定制信息，并可将其嵌入到应用程序视图，通过编程的方式设置地图的各种属性（包括当前地图显示的区域以及用户的方位）。您也可以使用定制标注或标准标注（例如使用测针标记）突出显示地图中的某些区域或额外的信息。</p>
+<p>在iOS 4.0系统中，该框架开始支持可拖动标注以及定制覆盖层。可拖动标注允许您通过编程方式或通过用户交互方式重定位某个标注的位置。覆盖层可用于创建多个点组成的复杂地图标注。地图表面诸如公交路线、选举地图、公园边界或者气象信息（例如雷达数据）等可以使用覆盖层进行显示。</p>
+<h5 id="Message-UI-框架"><a href="#Message-UI-框架" class="headerlink" title="Message UI 框架"></a>Message UI 框架</h5><p>iOS 3.0引入了Message UI框架 (MessageUI.framework)。您可以利用该框架撰写电子邮件，并将其放入到用户的发件箱排队等候发送。该框架提供一个视图控制器界面，您可以在应用程序中展现该界面，让用户通过该界面撰写邮件。界面的字段可以根据待发送信息的内容生成。例如您可以设置接收人、主题、邮件内容并可以在邮件中包含附件。这个界面允许用户先对邮件进行编辑，然后再选择接受。在用户接受邮件内容后，相应的邮件就会放入用户的发件箱排队等候发送。</p>
+<p>在iOS 4.0及其后续的系统中，该框架提供一个SMS撰写面板控制器。您可以通过它在应用程序中直接创建并编辑SMS信息（无需离开应用程序）。和电子邮件撰写界面一样，该界面也允许用户先编辑SMS信息再发送。</p>
+<h5 id="UIKit-框架"><a href="#UIKit-框架" class="headerlink" title="UIKit 框架"></a>UIKit 框架</h5><p>UIKit框架 (UIKit.framework)的Objective-C编程接口为实现iOS应用程序的图形及事件驱动提供关键基础。iOS系统所有程序都需要通过该框架实现下述核心功能：</p>
+<ul>
+<li>应用程序管理</li>
+<li>用户界面管理</li>
+<li>图形和窗口支持</li>
+<li>多任务支持</li>
+<li>处理触摸及移动事件。</li>
+<li>代表标准系统视图和控件的对象</li>
+<li>文本和web内容相关操作</li>
+<li>剪切、复制以及粘贴</li>
+<li>使用动画显示用户界面内容</li>
+<li>通过URL方式将其他应用程序整合到系统</li>
+<li>苹果推送通知服务支持，请查看“苹果推送通知服务 ”</li>
+<li>为残疾用户提供辅助功能</li>
+<li>本地通知的调度和发送</li>
+<li>创建PDF</li>
+<li>使用定制输入视图（其行为类似系统键盘）</li>
+<li>创建和系统键盘进行交互的定制文本视图</li>
+</ul>
+<p>除了链编至应用程序的基础代码，UIKit还为下述和设备紧密相连的功能提供支持：</p>
+<ul>
+<li>加速器数据</li>
+<li>内置相机（存在相机的设备）</li>
+<li>用户的图片库</li>
+<li>设备名称和模型信息</li>
+<li>电池状态信息</li>
+<li>距离感应器信息</li>
+<li>来自绑定听筒的远程控制信息</li>
+</ul>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/03/24/2014/mac显示隐藏文件命令/" rel="next" title="Mac显示隐藏文件命令">
+                <i class="fa fa-chevron-left"></i> Mac显示隐藏文件命令
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/06/14/2014/linux下统计代码行数/" rel="prev" title="Linux下统计代码行数">
+                Linux下统计代码行数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2014/04/02/2014/iOS系统框架介绍--CocoaTouch层/"
+           data-title="iOS系统框架介绍--CocoaTouch层" data-url="http://yoursite.com/2014/04/02/2014/iOS系统框架介绍--CocoaTouch层/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/11960955?v=3&s=460"
+               alt="keyzhang" />
+          <p class="site-author-name" itemprop="name">keyzhang</p>
+          <p class="site-description motion-element" itemprop="description">畅想❤️未来</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/KeyJohn" target="_blank" title="Github">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5180004352/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cxwlbj.com/" target="_blank" title="畅想未来">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  畅想未来
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cocoa-Touch层："><span class="nav-number">1.</span> <span class="nav-text">Cocoa Touch层：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Address-Book-UI-框架"><span class="nav-number">1.0.1.</span> <span class="nav-text">Address Book UI 框架</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Event-Kit-UI-框架"><span class="nav-number">1.0.2.</span> <span class="nav-text">Event Kit UI 框架</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Game-Kit-框架"><span class="nav-number">1.0.3.</span> <span class="nav-text">Game Kit 框架</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#iAd-框架"><span class="nav-number">1.0.4.</span> <span class="nav-text">iAd 框架</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Map-Kit-框架"><span class="nav-number">1.0.5.</span> <span class="nav-text">Map Kit 框架</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Message-UI-框架"><span class="nav-number">1.0.6.</span> <span class="nav-text">Message UI 框架</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#UIKit-框架"><span class="nav-number">1.0.7.</span> <span class="nav-text">UIKit 框架</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">keyzhang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"KeyJohn"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

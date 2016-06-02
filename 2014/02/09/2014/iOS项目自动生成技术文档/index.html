@@ -1,0 +1,642 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="做项目一般都会要求写技术文档，特别是单干接项目的，客户多少都会要求除了提供code之外，还得提供技术文档，而如果我们手写这类的文档，那工作量不比写code少。一般的开发工具都会提供类似集成的功能，比如Java语言本身就自带javadoc命令，可以从源码中抽取文档，几个配置，几条命令就搞定了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IOS项目自动生成技术文档">
+<meta property="og:url" content="http://yoursite.com/2014/02/09/2014/iOS项目自动生成技术文档/index.html">
+<meta property="og:site_name" content="keyzhang">
+<meta property="og:description" content="做项目一般都会要求写技术文档，特别是单干接项目的，客户多少都会要求除了提供code之外，还得提供技术文档，而如果我们手写这类的文档，那工作量不比写code少。一般的开发工具都会提供类似集成的功能，比如Java语言本身就自带javadoc命令，可以从源码中抽取文档，几个配置，几条命令就搞定了。">
+<meta property="og:image" content="http://7xrn7f.com1.z0.glb.clouddn.com/16-6-1/48538434.jpg">
+<meta property="og:updated_time" content="2014-02-08T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IOS项目自动生成技术文档">
+<meta name="twitter:description" content="做项目一般都会要求写技术文档，特别是单干接项目的，客户多少都会要求除了提供code之外，还得提供技术文档，而如果我们手写这类的文档，那工作量不比写code少。一般的开发工具都会提供类似集成的功能，比如Java语言本身就自带javadoc命令，可以从源码中抽取文档，几个配置，几条命令就搞定了。">
+<meta name="twitter:image" content="http://7xrn7f.com1.z0.glb.clouddn.com/16-6-1/48538434.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> IOS项目自动生成技术文档 | keyzhang </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a178e1666ee6159ce095ddb1e4d1230d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">keyzhang</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">业精于勤荒于嬉，行成于思毁于随</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                IOS项目自动生成技术文档
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-02-09T00:00:00+08:00" content="2014-02-09">
+              2014-02-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/02/09/2014/iOS项目自动生成技术文档/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/02/09/2014/iOS项目自动生成技术文档/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>做项目一般都会要求写技术文档，特别是单干接项目的，客户多少都会要求除了提供code之外，还得提供技术文档，而如果我们手写这类的文档，那工作量不比写code少。一般的开发工具都会提供类似集成的功能，比如Java语言本身就自带javadoc命令，可以从源码中抽取文档，几个配置，几条命令就搞定了。</p>
+<a id="more"></a>
+<p>Xcode工具本身不具备这样的功能，但是我们通过一些插件和工具来达到这个目的。</p>
+<h3 id="生成注释"><a href="#生成注释" class="headerlink" title="生成注释"></a>生成注释</h3><p>生成文档之前，我们需要给代码中的方法或者变量写上注释，然后再利用工具根据这些规范的注释自动生成文档。所以呢，注释一定要规范统一，但是每次都要手动输入规范化的注释，着实也麻烦，这里需要借助Xcode的开源插件VVDocumenter，规范注释生成器，非常方便！</p>
+<p><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-6-1/48538434.jpg" alt=""></p>
+<p>多行注释直接输入三个斜线 “///“ 会自动格式化，如上图所示</p>
+<p>单行注释需要输入三个斜线+空格 “/// 注释”。输入两个“//”当然可以正确的被xcode识别为注释，但是在下面生成文档的时候不能被识别为文档注释。</p>
+<p>然后再配合 appledoc 、doxygen 或者 headdoc，就可以生成技术文档。</p>
+<p>对于Objective-C来说，目前比较好用的是appledoc 和 doxygen。</p>
+<h3 id="工具对比"><a href="#工具对比" class="headerlink" title="工具对比"></a>工具对比</h3><h5 id="headerdoc"><a href="#headerdoc" class="headerlink" title="headerdoc"></a>headerdoc</h5><p>xcode 自带的文档生成工具、基于命令行的操作、使用方便。但是只能生成以 /<em>* ! </em>/ 的格式的注释。还有一个缺点是每个类文件对应一个注释文件，没有最后汇总导航的index文件。</p>
+<h5 id="docxygen"><a href="#docxygen" class="headerlink" title="docxygen"></a>docxygen</h5><p>功能强大、三者中支持语言最多的、无headerdoc缺点、基于图形化的操作界面，但是配置较多，可以生成html文档或pdf文档。</p>
+<h5 id="appledoc"><a href="#appledoc" class="headerlink" title="appledoc"></a>appledoc</h5><p>基于命令行的操作、使用方便、无headerdoc缺点、默认生成的文档风格和苹果的官方文档是一致的，即docset，集成到xcode中就跟苹果的官方文档一模一样，在源码中按住option再单击就可以调出相应方法的帮助。当然也可以生成html文档。</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/01/18/2014/iOS7适配坐标问题/" rel="next" title="iOS7适配坐标问题">
+                <i class="fa fa-chevron-left"></i> iOS7适配坐标问题
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/03/06/2014/轻松在mac上配置svn服务器/" rel="prev" title="轻松在mac上配置svn服务器">
+                轻松在mac上配置svn服务器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2014/02/09/2014/iOS项目自动生成技术文档/"
+           data-title="IOS项目自动生成技术文档" data-url="http://yoursite.com/2014/02/09/2014/iOS项目自动生成技术文档/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/11960955?v=3&s=460"
+               alt="keyzhang" />
+          <p class="site-author-name" itemprop="name">keyzhang</p>
+          <p class="site-description motion-element" itemprop="description">畅想❤️未来</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/KeyJohn" target="_blank" title="Github">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5180004352/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cxwlbj.com/" target="_blank" title="畅想未来">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  畅想未来
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成注释"><span class="nav-number">1.</span> <span class="nav-text">生成注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工具对比"><span class="nav-number">2.</span> <span class="nav-text">工具对比</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#headerdoc"><span class="nav-number">2.0.1.</span> <span class="nav-text">headerdoc</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#docxygen"><span class="nav-number">2.0.2.</span> <span class="nav-text">docxygen</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#appledoc"><span class="nav-number">2.0.3.</span> <span class="nav-text">appledoc</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">keyzhang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"KeyJohn"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

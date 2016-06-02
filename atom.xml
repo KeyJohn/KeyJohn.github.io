@@ -16,31 +16,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>分享--如何看待敏捷开发</title>
-    <link href="http://yoursite.com/2016/04/18/%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
-    <id>http://yoursite.com/2016/04/18/如何看待敏捷开发/</id>
+    <title>如何看待敏捷开发</title>
+    <link href="http://yoursite.com/2016/04/18/2016/%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/"/>
+    <id>http://yoursite.com/2016/04/18/2016/如何看待敏捷开发/</id>
     <published>2016-04-17T16:00:00.000Z</published>
     <updated>2016-04-17T16:00:00.000Z</updated>
     
-    <content type="html">&lt;p&gt;原文转载自这里:&lt;a href=&quot;http://www.jianshu.com/p/cebce6b77ab6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/cebce6b77ab6&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;转载自这里:&lt;a href=&quot;http://www.jianshu.com/p/cebce6b77ab6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jianshu.com/p/cebce6b77ab6&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;在CMM（能力成熟度模型Capability Maturity Model的缩写，是一种侧重于软件开发过程的管理及工程能力的提高与评估的开发模型）神话崩溃以后，敏捷开发逐渐引起了人们的关注，并被寄予厚望。下面我们就来谈一谈敏捷开发相关的一些知识。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;敏捷开发的起源&quot;&gt;&lt;a href=&quot;#敏捷开发的起源&quot; class=&quot;headerlink&quot; title=&quot;敏捷开发的起源&quot;&gt;&lt;/a&gt;敏捷开发的起源&lt;/h2&gt;&lt;p&gt;我们大部分人都学过瀑布开发模型，它是以文档为驱动的。因为在瀑布的整个开发过程中，开发人员根据需求文档进行开发，一切以文档为依据。敏捷开发(Agile Development)是一种以人为核心、迭代、循序渐进的开发方法，是一种软件开发的流程，它会指导我们用规定的环节去一步一步完成项目的开发；而这种开发方式的主要驱动核心是人，注重的是人与人之间，面对面的交流；它只写有必要的文档，或尽量少写文档；采用的是迭代式开发。&lt;/p&gt;
+&lt;h4 id=&quot;敏捷开发的起源&quot;&gt;&lt;a href=&quot;#敏捷开发的起源&quot; class=&quot;headerlink&quot; title=&quot;敏捷开发的起源&quot;&gt;&lt;/a&gt;敏捷开发的起源&lt;/h4&gt;&lt;p&gt;我们大部分人都学过瀑布开发模型，它是以文档为驱动的。因为在瀑布的整个开发过程中，开发人员根据需求文档进行开发，一切以文档为依据。敏捷开发(Agile Development)是一种以人为核心、迭代、循序渐进的开发方法，是一种软件开发的流程，它会指导我们用规定的环节去一步一步完成项目的开发；而这种开发方式的主要驱动核心是人，注重的是人与人之间，面对面的交流；它只写有必要的文档，或尽量少写文档；采用的是迭代式开发。&lt;/p&gt;
 &lt;p&gt;敏捷开发提倡将一个完整的软件版本划分为多个迭代，每个迭代实现不同的特性。重大的、优先级高的特性优先实现，风险高的特性优先实现。在项目的早期就将软件的原型开发出来，并基于这个原型在后续的迭代不断完善。迭代开发的好处是：尽早编码，尽早暴露项目的技术风险。尽早使客户见到可运行的软件，并提出优化意见。可以分阶段提早向不同的客户交付可用的版本。&lt;/p&gt;
 &lt;p&gt;在每个迭代中，架构师负责将所有的特性分解成多个Story Card。每个Story可以视为一个独立的特性。每个Story应该可以在最多1个星期内完成开发，交付提前测试（Pre-Test）。当一个迭代中的所有Story开发完毕以后，测试组再进行完整的测试。在整个测试过程中（pre-test，test），基于Daily build，测试组永远都是每天从配置库上取下最新编译的版本进行测试，开发人员也随时修改测试人员提交的问题单，并合入配置库。&lt;/p&gt;
-&lt;p&gt;敏捷开发的一个特点是开放式办公，充分沟通，包括测试人员也和开发人员一起办公。基于Story Card的开发方式，团队会在开放式办公区域放置一块白板，上面粘贴着所有的Story Card，按当前的开发状态贴在4个区域中，分别是：未开发，开发中，预测试中，测试中。Story Card的开发人员和测试人员根据开发进度在Story Wall上移动Story Card，更新Story Card的状态。这种方式可以对项目开发进度有一个非常直观的了解。&lt;br&gt;&lt;img src=&quot;http://7xrn7f.com1.z0.glb.clouddn.com/16-4-26/75840551.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;敏捷开发宣言&quot;&gt;&lt;a href=&quot;#敏捷开发宣言&quot; class=&quot;headerlink&quot; title=&quot;敏捷开发宣言&quot;&gt;&lt;/a&gt;敏捷开发宣言&lt;/h2&gt;&lt;ul&gt;
+&lt;p&gt;敏捷开发的一个特点是开放式办公，充分沟通，包括测试人员也和开发人员一起办公。基于Story Card的开发方式，团队会在开放式办公区域放置一块白板，上面粘贴着所有的Story Card，按当前的开发状态贴在4个区域中，分别是：未开发，开发中，预测试中，测试中。Story Card的开发人员和测试人员根据开发进度在Story Wall上移动Story Card，更新Story Card的状态。这种方式可以对项目开发进度有一个非常直观的了解。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/44735992.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;敏捷开发宣言&quot;&gt;&lt;a href=&quot;#敏捷开发宣言&quot; class=&quot;headerlink&quot; title=&quot;敏捷开发宣言&quot;&gt;&lt;/a&gt;敏捷开发宣言&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;个体和交互 胜过 过程和工具&lt;/li&gt;
 &lt;li&gt;可以工作的软件 胜过 面面俱到的文档&lt;/li&gt;
 &lt;li&gt;客户合作 胜过 合同谈判3`r&lt;/li&gt;
 &lt;li&gt;响应变化 胜过 遵循计划&lt;/li&gt;
 &lt;li&gt;虽然右项也有价值，但是我们认为左项具有更大的价值。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;敏捷开发的方式&quot;&gt;&lt;a href=&quot;#敏捷开发的方式&quot; class=&quot;headerlink&quot; title=&quot;敏捷开发的方式&quot;&gt;&lt;/a&gt;敏捷开发的方式&lt;/h2&gt;&lt;p&gt;敏捷开发作为一种指导思想或开发方式，Scrum和XP（Extreme Programming：极限编程）是敏捷开发的具体方式。Scrum和XP的区别是，Scrum偏重于过程，XP则偏重于实践，但是实际中，两者是结合一起应用的。&lt;/p&gt;
+&lt;h4 id=&quot;敏捷开发的方式&quot;&gt;&lt;a href=&quot;#敏捷开发的方式&quot; class=&quot;headerlink&quot; title=&quot;敏捷开发的方式&quot;&gt;&lt;/a&gt;敏捷开发的方式&lt;/h4&gt;&lt;p&gt;敏捷开发作为一种指导思想或开发方式，Scrum和XP（Extreme Programming：极限编程）是敏捷开发的具体方式。Scrum和XP的区别是，Scrum偏重于过程，XP则偏重于实践，但是实际中，两者是结合一起应用的。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Scrum方式&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Scrum的英文意思是橄榄球运动的一个专业术语，表示“争球”的动作；把一个开发流程的名字取名为Scrum，大家像打橄榄球一样迅速、富有战斗激情，运用该流程，你就能看到你团队高效的工作。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xrn7f.com1.z0.glb.clouddn.com/16-4-26/32536704.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/86270217.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Scrum整个开发过程由若干个短的迭代周期组成，一个短的迭代周期称为一个Sprint，每个Sprint的建议长度是2到4周(互联网产品研发可以使用1周的Sprint)。在Scrum中，使用Product Backlog来管理产品的需求，Product backlog是一个按照商业价值排序的需求列表，Scrum团队总是先开发对客户具有较高价值的需求。在Sprint中，Scrum团队从产品Backlog中挑选最高优先级的需求进行开发。挑选的需求在Sprint计划会议上经过讨论、分析和估算得到相应的任务列表，我们称它为Sprint backlog。在每个迭代结束时，Scrum团队将递交潜在可交付的产品增量。Scrum 采用迭代、增量的方法来优化可预见性并控制风险。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Scrum开发流程中的三大角色&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;产品负责人（Product Owner）&lt;/strong&gt;&lt;/p&gt;
@@ -51,19 +52,18 @@
 &lt;p&gt;主要负责软件产品在Scrum规定流程下进行开发工作，人数控制在5~10人左右，每个成员可能负责不同的技术方面，但要求每成员必须要有很强的自我管理能力，同时具有一定的表达能力；成员可以采用任何工作方式，只要能达到Sprint的目标。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;进行Scrum开发的流程&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、我们首先需要确定一个Product Backlog（按优先顺序排列的一个产品需求列表），这个是由Product Owner 负责的；&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xrn7f.com1.z0.glb.clouddn.com/16-4-26/93724272.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/84007793.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;2、Scrum Team根据Product Backlog列表，做工作量的预估和安排；&lt;/p&gt;
 &lt;p&gt;3、有了Product Backlog列表，我们需要通过 Sprint Planning Meeting（Sprint计划会议） 来从中挑选出一个Story作为本次迭代完成的目标，这个目标的时间周期是1~4个星期，然后把这个Story进行细化，形成一个Sprint Backlog；&lt;/p&gt;
 &lt;p&gt;4、Sprint Backlog是由Scrum Team去完成的，每个成员根据Sprint Backlog再细化成更小的任务（细到每个任务的工作量在2天内能完成）；&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xrn7f.com1.z0.glb.clouddn.com/16-4-26/23241578.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/29821984.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;5、在Scrum Team完成计划会议上选出的Sprint Backlog过程中，需要进行 Daily Scrum Meeting（每日站立会议），每次会议控制在15分钟左右，每个人都必须发言，并且要向所有成员当面汇报你昨天完成了什么，并且向所有成员承诺你今天要完成什么，同时遇到不能解决的问题也可以提出，每个人回答完成后，要走到黑板前更新自己的 Sprint burn down（Sprint燃尽图）；&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xrn7f.com1.z0.glb.clouddn.com/16-4-26/3683245.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;6、做到每日集成，也就是每天都要有一个可以成功编译、并且可以演示的版本；很多人可能还没有用过自动化的每日集成，其实TFS就有这个功能，它可以支持每次有成员进行签入操作的时候，在服务器上自动获取最新版本，然后在服务器中编译，如果通过则马上再执行单元测试代码，如果也全部通过，则将该版本发布，这时一次正式的签入操作才保存到TFS中，中间有任何失败，都会用邮件通知项目管理人员；&lt;/p&gt;
 &lt;p&gt;7、当一个Story完成，也就是Sprint Backlog被完成，也就表示一次Sprint完成，这时，我们要进行 Srpint Review Meeting（演示会议），也称为评审会议，产品负责人和客户都要参加（最好本公司老板也参加），每一个Scrum Team的成员都要向他们演示自己完成的软件产品（这个会议非常重要，一定不能取消）；&lt;/p&gt;
 &lt;p&gt;8、最后就是 Sprint Retrospective Meeting（回顾会议），也称为总结会议，以轮流发言方式进行，每个人都要发言，总结并讨论改进的地方，放入下一轮Sprint的产品需求中；&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;XP方式&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;极限编程是一个轻量级的、灵巧的软件开发方法；同时它也是一个非常严谨和周密的方法。它的基础和价值观是交流、朴素、反馈和勇气；即，任何一个软件项目都可以从四个方面入手进行改善：加强交流；从简单做起；寻求反馈；勇于实事求是。XP是一种近螺旋式的开发方法，它将复杂的开发过程分解为一个个相对比较简单的小周期；通过积极的交流、反馈以及其它一系列的方法，开发人员和客户可以非常清楚开发进度、变化、待解决的问题和潜在的困难等，并根据实际情况及时地调整开发过程。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xrn7f.com1.z0.glb.clouddn.com/16-4-26/6989833.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/57604507.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;XP的十三种核心实践&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;团队协作(Whole Team)&lt;/li&gt;
@@ -84,13 +84,13 @@
 &lt;p&gt;关于测试驱动开发：编写单元测试是一个验证行为，更是一个设计行为。同样，它更是一种编写文档的行为。编写单元测试避免了相当数量的反馈循环，尤其是功功能能验证方面的反馈循环。程序员以非常短的循环周期工作，他们先增加一个失败的测试，然后使之通过。&lt;/p&gt;
 &lt;p&gt;关于隐喻：隐喻同体系结构是同义词，隐喻用于描述项目的全貌，Story用于描述个别具体的特征。隐喻是将整个系统联系在一起的全局视图；它是系统的未来影像，是它使得所有单独模块的位置和外观变得明显直观。如果模块的外观与整个隐喻不符，那么你就知道该模块是错误的&lt;/p&gt;
 &lt;p&gt;XP的一个成功因素是重视客户的反馈——开发的目的就是为了满足客户的需要。XP方法使开发人员始终都能自信地面对客户需求的变化。XP强调团队合作，经理、客户和开发人员都是开发团队中的一员。团队通过相互之间的充分交流和合作，使用XP这种简单但有效的方式，努力开发出高质量的软件。XP的设计简单而高效；程序员们通过测试获得客户反馈，并根据变化修改代码和设计，他们总是争取尽可能早地将软件交付给客户。XP程序员能够勇于面对需求和技术上的变化。&lt;/p&gt;
-&lt;h2 id=&quot;什么是优秀团队&quot;&gt;&lt;a href=&quot;#什么是优秀团队&quot; class=&quot;headerlink&quot; title=&quot;什么是优秀团队&quot;&gt;&lt;/a&gt;什么是优秀团队&lt;/h2&gt;&lt;p&gt;有家公司的一个团队的一个项目用的是”敏捷开发方法”，而当时公司的理念恰恰是：开放、协作性强、扁平化团队，以用户为中心；和团队使用的敏捷方法理念正好相同，结果毫无悬疑的拿到了优秀团队奖。即使开发的项目并不是很成功，但公司需要一个团队来做榜样，来激励其他团队，而那里正好有这么一个团队。&lt;/p&gt;
+&lt;h4 id=&quot;什么是优秀团队&quot;&gt;&lt;a href=&quot;#什么是优秀团队&quot; class=&quot;headerlink&quot; title=&quot;什么是优秀团队&quot;&gt;&lt;/a&gt;什么是优秀团队&lt;/h4&gt;&lt;p&gt;有家公司的一个团队的一个项目用的是”敏捷开发方法”，而当时公司的理念恰恰是：开放、协作性强、扁平化团队，以用户为中心；和团队使用的敏捷方法理念正好相同，结果毫无悬疑的拿到了优秀团队奖。即使开发的项目并不是很成功，但公司需要一个团队来做榜样，来激励其他团队，而那里正好有这么一个团队。&lt;/p&gt;
 &lt;p&gt;如果做不了优秀的团队，那么就做一个典型的团队，公司需要这么一个做示范的话题。优秀的团队并不是拘泥于某种开发方式的，而是最适合某种方式的。希望您也能在一个优秀的团队。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;原文转载自这里:&lt;a href=&quot;http://www.jianshu.com/p/cebce6b77ab6&quot;&gt;http://www.jianshu.com/p/cebce6b77ab6&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;转载自这里:&lt;a href=&quot;http://www.jianshu.com/p/cebce6b77ab6&quot;&gt;http://www.jianshu.com/p/cebce6b77ab6&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;在CMM（能力成熟度模型Capability Maturity Model的缩写，是一种侧重于软件开发过程的管理及工程能力的提高与评估的开发模型）神话崩溃以后，敏捷开发逐渐引起了人们的关注，并被寄予厚望。下面我们就来谈一谈敏捷开发相关的一些知识。&lt;/p&gt;
     
@@ -100,11 +100,87 @@
   </entry>
   
   <entry>
+    <title>如何追踪app崩溃率，如何解决线上闪退</title>
+    <link href="http://yoursite.com/2016/03/05/2016/%E5%A6%82%E4%BD%95%E8%BF%BD%E8%B8%AAapp%E5%B4%A9%E6%BA%83%E7%8E%87%EF%BC%8C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E7%BA%BF%E4%B8%8A%E9%97%AA%E9%80%80/"/>
+    <id>http://yoursite.com/2016/03/05/2016/如何追踪app崩溃率，如何解决线上闪退/</id>
+    <published>2016-03-04T16:00:00.000Z</published>
+    <updated>2016-03-04T16:00:00.000Z</updated>
+    
+    <content type="html">&lt;p&gt;转载自这里:&lt;a href=&quot;http://www.cocoachina.com/ios/20160414/15918.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.cocoachina.com/ios/20160414/15918.html&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;当iOS设备上的App应用闪退时，操作系统会生成一个crash日志，保存在设备上。crash日志上有很多有用的信息，比如每个正在执行线程的完整堆栈跟踪信息和内存映像，这样就能够通过解析这些信息进而定位crash发生时的代码逻辑，从而找到App闪退的原因。通常来说，crash产生来源于两种问题：违反iOS系统规则导致的crash和App代码逻辑BUG导致的crash，下面分别对他们进行分析。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;违反iOS系统规则产生crash的三种类型：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(1) 内存报警闪退&lt;/p&gt;
+&lt;p&gt;当iOS检测到内存过低时，它的VM系统会发出低内存警告通知，尝试回收一些内存；如果情况没有得到足够的改善，iOS会终止后台应用以回收更多内存；最后，如果内存还是不足，那么正在运行的应用可能会被终止掉。在Debug模式下，可以主动将客户端执行的动作逻辑写入一个log文件中，这样程序童鞋可以将内存预警的逻辑写入该log文件，当发生如下截图中的内存报警时，就是提醒当前客户端性能内存吃紧，可以通过Instruments工具中的Allocations 和 Leaks模块库来发现内存分配问题和内存泄漏问题。&lt;/p&gt;
+&lt;p&gt;(2) 响应超时&lt;/p&gt;
+&lt;p&gt;当应用程序对一些特定的事件（比如启动、挂起、恢复、结束）响应不及时，苹果的Watchdog机制会把应用程序干掉，并生成一份相应的crash日志。这些事件与下列UIApplicationDelegate方法相对应，当遇到Watchdog日志时，可以检查上图中的几个方法是否有比较重的阻塞UI的动作。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;application:didFinishLaunchingWithOptions:
+applicationWillResignActive:
+applicationDidEnterBackground:
+applicationWillEnterForeground:
+applicationDidBecomeActive:
+applicationWillTerminate:
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;(3) 用户强制退出&lt;/p&gt;
+&lt;p&gt;一看到“用户强制退出”，首先可能想到的双击Home键，然后关闭应用程序。不过这种场景一般是不会产生crash日志的，因为双击Home键后，所有的应用程序都处于后台状态，而iOS随时都有可能关闭后台进程，当应用阻塞界面并停止响应时这种场景才会产生crash日志。这里指的“用户强制退出”场景，是稍微比较复杂点的操作：先按住电源键，直到出现“滑动关机”的界面时，再按住Home键，这时候当前应用程序会被终止掉，并且产生一份相应事件的crash日志。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;应用逻辑的Bug&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;大多数闪退崩溃日志的产生都是因为应用中的Bug，这种Bug的错误种类有很多，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SEGV：（Segmentation Violation，段违例），无效内存地址，比如空指针，未初始化指针，栈溢出等；&lt;/li&gt;
+&lt;li&gt;SIGABRT：收到Abort信号，可能自身调用abort()或者收到外部发送过来的信号；&lt;/li&gt;
+&lt;li&gt;SIGBUS：总线错误。与SIGSEGV不同的是，SIGSEGV访问的是无效地址（比如虚存映射不到物理内存），而SIGBUS访问的是有效地址，但总线访问异常（比如地址对齐问题）；&lt;/li&gt;
+&lt;li&gt;SIGILL：尝试执行非法的指令，可能不被识别或者没有权限；&lt;/li&gt;
+&lt;li&gt;SIGFPE：Floating Point Error，数学计算相关问题（可能不限于浮点计算），比如除零操作；&lt;/li&gt;
+&lt;li&gt;SIGPIPE：管道另一端没有进程接手数据；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常见的崩溃原因基本都是代码逻辑问题或资源问题，比如数组越界，访问野指针或者资源不存在，或资源大小写错误等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;crash的收集&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果是在windows上你可以通过itools或pp助手等辅助工具查看系统产生的历史crash日志，然后再根据app来查看。如果是在Mac 系统上，只需要打开xcode-&amp;gt;windows-&amp;gt;devices，选择device logs进行查看，如下图，这些crash文件都可以导出来，然后再单独对这个crash文件做处理分析。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cc.cocimg.com/api/uploads/20160413/1460532544744038.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;市场上已有的商业软件提供crash收集服务，这些软件基本都提供了日志存储，日志符号化解析和服务端可视化管理等服务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.crashlytics.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Crashlytics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.crittercism.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Crittercism&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.bugsense.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bugsense&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.hockeyapp.net&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HockeyApp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.flurry.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Flurry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;开源的软件也可以拿来收集crash日志，比如Razor,QuincyKit（git链接）等，这些软件收集crash的原理其实大同小异，都是根据系统产生的crash日志进行了一次提取或封装，然后将封装后的crash文件上传到对应的服务端进行解析处理。很多商业软件都采用了Plcrashreporter这个开源工具来上传和解析crash，比如HockeyApp,Flurry和crittercism等。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cc.cocimg.com/api/uploads/20160413/1460532651476437.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;由于自己的crash信息太长，找了一张示例：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;crash标识是应用进程产生crash时的一些标识信息，它描述了该crash的唯一标识（E838FEFB-ECF6-498C-8B35-D40F0F9FEAE4），所发生的硬件设备类型（iphone3,1代表iphone4），以及App进程相关的信息等；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基本信息描述的是crash发生的时间和系统版本；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;异常类型描述的是crash发生时抛出的异常类型和错误码；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;线程回溯描述了crash发生时所有线程的回溯信息，每个线程在每一帧对应的函数调用信息（这里由于空间限制没有全部列出）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;二进制映像是指crash发生时已加载的二进制文件。以上就是一份crash日志包含的所有信息，接下来就需要根据这些信息去解析定位导致crash发生的代码逻辑， 这就需要用到符号化解析的过程（洋名叫：symbolication)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;解决线上闪退&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先保证，发布前充分测试。发布后依然有闪退现象，查看崩溃日志，及时修复并发布。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转载自这里:&lt;a href=&quot;http://www.cocoachina.com/ios/20160414/15918.html&quot;&gt;http://www.cocoachina.com/ios/20160414/15918.html&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;当iOS设备上的App应用闪退时，操作系统会生成一个crash日志，保存在设备上。crash日志上有很多有用的信息，比如每个正在执行线程的完整堆栈跟踪信息和内存映像，这样就能够通过解析这些信息进而定位crash发生时的代码逻辑，从而找到App闪退的原因。通常来说，crash产生来源于两种问题：违反iOS系统规则导致的crash和App代码逻辑BUG导致的crash，下面分别对他们进行分析。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Mac 10.11 El capitan U盘启动盘制作</title>
-    <link href="http://yoursite.com/2016/02/24/mac%2010.11%20U%E7%9B%98%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C/"/>
-    <id>http://yoursite.com/2016/02/24/mac 10.11 U盘启动盘制作/</id>
+    <link href="http://yoursite.com/2016/02/24/2016/mac%2010.11%20U%E7%9B%98%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C/"/>
+    <id>http://yoursite.com/2016/02/24/2016/mac 10.11 U盘启动盘制作/</id>
     <published>2016-02-23T16:00:00.000Z</published>
-    <updated>2016-02-26T16:00:00.000Z</updated>
+    <updated>2016-02-23T16:00:00.000Z</updated>
     
     <content type="html">&lt;ol&gt;
 &lt;li&gt;抹掉u盘 名称：Capitan  格式：OS X 扩展（日志式） 方案：GUID分区图&lt;/li&gt;
@@ -114,8 +190,8 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/Snip20160112_1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入密码，拷贝完成就ok了！
-&lt;/code&gt;&lt;/pre&gt;</content>
+&lt;p&gt;输入密码，拷贝完成就ok了！&lt;/p&gt;
+</content>
     
     <summary type="html">
     
@@ -132,33 +208,68 @@
   
   <entry>
     <title>去除云梯VPN提供的profile文件</title>
-    <link href="http://yoursite.com/2016/01/22/%E5%8E%BB%E9%99%A4%E4%BA%91%E6%A2%AFvpn%E6%8F%90%E4%BE%9B%E7%9A%84profile%E6%96%87%E4%BB%B6/"/>
-    <id>http://yoursite.com/2016/01/22/去除云梯vpn提供的profile文件/</id>
+    <link href="http://yoursite.com/2016/01/22/2016/%E5%8E%BB%E9%99%A4%E4%BA%91%E6%A2%AFvpn%E6%8F%90%E4%BE%9B%E7%9A%84profile%E6%96%87%E4%BB%B6/"/>
+    <id>http://yoursite.com/2016/01/22/2016/去除云梯vpn提供的profile文件/</id>
     <published>2016-01-21T16:00:00.000Z</published>
     <updated>2016-01-21T16:00:00.000Z</updated>
     
-    <content type="html">&lt;p&gt; &lt;strong&gt;利用profiles命令，可以通过profiles -h 查看帮助&lt;/strong&gt; &lt;/p&gt;
-&lt;ol&gt;
+    <content type="html">&lt;h3 id=&quot;利用profiles命令，可以通过profiles-h-查看帮助&quot;&gt;&lt;a href=&quot;#利用profiles命令，可以通过profiles-h-查看帮助&quot; class=&quot;headerlink&quot; title=&quot;利用profiles命令，可以通过profiles -h 查看帮助&quot;&gt;&lt;/a&gt;利用profiles命令，可以通过profiles -h 查看帮助&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;我们可以看到，通过 profiles -L 命令，可以查看当前用户是否有profile：&lt;/p&gt;
  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;localhost:~ keyzhang$ profiles -L&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;keyzhang[1] attribute: profileIdentifier: com.vpncloud.profile &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;There are 1 user configuration profiles installed for &amp;apos;keyzhang&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;然后我们用profiles -R 命令可以remove这个profile&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;我们通过命令：profiles -R -p “com.vpncloud.profile” 就可以删掉这个profil&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;我们通过命令：profiles -R -p “com.vpncloud.profile” 就可以删掉这个profile&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;最后再次 profiles -L 命令检查是否删除成功：&lt;/p&gt;
  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;localhost:~ keyzhang$ profiles -L&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;There are no configuration profiles installed for user &amp;apos;keyzhang&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;搞定！&lt;/p&gt;
+&lt;h3 id=&quot;搞定！&quot;&gt;&lt;a href=&quot;#搞定！&quot; class=&quot;headerlink&quot; title=&quot;搞定！&quot;&gt;&lt;/a&gt;搞定！&lt;/h3&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;利用profiles命令，可以通过profiles-h-查看帮助&quot;&gt;&lt;a href=&quot;#利用profiles命令，可以通过profiles-h-查看帮助&quot; class=&quot;headerlink&quot; title=&quot;利用profiles命令，可以通过profiles -h
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>App Transport Security</title>
+    <link href="http://yoursite.com/2015/07/16/2015/App%20Transport%20Security/"/>
+    <id>http://yoursite.com/2015/07/16/2015/App Transport Security/</id>
+    <published>2015-07-15T16:00:00.000Z</published>
+    <updated>2015-07-15T16:00:00.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;应用程序数据传输安全&quot;&gt;&lt;a href=&quot;#应用程序数据传输安全&quot; class=&quot;headerlink&quot; title=&quot;应用程序数据传输安全&quot;&gt;&lt;/a&gt;应用程序数据传输安全&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;最近在使用xcode7进行一个简单的网络请求时程序报错：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Application Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure. Temporary exceptions can be configured via your app’s Info.plist file.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;先看看这是一个什么错误&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;编译器告诉了我们在应用程序中使用了不安全的明文HTTP请求，如果要解决这一异常我们可以在info.plist文件中设置&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h5 id=&quot;应用程序安全传输（App-Transport-Security）&quot;&gt;&lt;a href=&quot;#应用程序安全传输（App-Transport-Security）&quot; class=&quot;headerlink&quot; title=&quot;应用程序安全传输（App Transport Security）&quot;&gt;&lt;/a&gt;应用程序安全传输（App Transport Security）&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;我们可以向一个应用程序的Info.plist文件中添加声明指定它需要保密通信领域。ATS防止网络传输数据意外泄漏，提供安全的默认行为，易于采用。因此，无论你是创建一个新的应用程序或更新现有的。你应该采用ATS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果你正在开发一个新的应用程序，你应该使用HTTPS安全协议。如果你有一个现有的应用程序，你应该应该尽可能地使用HTTPS保证应用程序的安全。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;像这样你可以在Info.plist文件中添加如下项：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;key&amp;gt;NSAppTransportSecurity&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;key&amp;gt;NSExceptionDomains&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;key&amp;gt;yourserver.com&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;!--Include to allow subdomains--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;key&amp;gt;NSIncludesSubdomains&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;true/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;!--Include to allow HTTP requests--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;key&amp;gt;NSTemporaryExceptionAllowsInsecureHTTPLoads&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;true/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;!--Include to specify minimum TLS version--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;key&amp;gt;NSTemporaryExceptionMinimumTLSVersion&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;string&amp;gt;TLSv1.1&amp;lt;/string&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;当然，如果不想使用ATS，你可以在Info.plist文件中添加如下项：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;key&amp;gt;NSAppTransportSecurity&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;!--Include to allow all connections (DANGER)--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;key&amp;gt;NSAllowsArbitraryLoads&amp;lt;/key&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;lt;true/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/dict&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;也就是这样:&lt;br&gt;&lt;img src=&quot;http://img.blog.csdn.net/20150716133020001&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt; &lt;strong&gt;利用profiles命令，可以通过profiles -h 查看帮助&lt;/strong&gt; &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;我们可以看到，通过 profiles -L 命令，可以查看当前用户是否有profile：&lt;/p&gt;
- &lt;figure class=&quot;hig
+      &lt;h3 id=&quot;应用程序数据传输安全&quot;&gt;&lt;a href=&quot;#应用程序数据传输安全&quot; class=&quot;headerlink&quot; title=&quot;应用程序数据传输安全&quot;&gt;&lt;/a&gt;应用程序数据传输安全&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;最近在使用xcode7进行一个简单的网络请求时程序报错：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Application Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure. Temporary exceptions can be configured via your app’s Info.plist file.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;先看看这是一个什么错误&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;编译器告诉了我们在应用程序中使用了不安全的明文HTTP请求，如果要解决这一异常我们可以在info.plist文件中设置&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -167,27 +278,16 @@
   
   <entry>
     <title>暴力解决wifi连不上的方法</title>
-    <link href="http://yoursite.com/2015/05/24/%E6%9A%B4%E5%8A%9B%E8%A7%A3%E5%86%B3wifi%E8%BF%9E%E4%B8%8D%E4%B8%8A%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>http://yoursite.com/2015/05/24/暴力解决wifi连不上的方法/</id>
+    <link href="http://yoursite.com/2015/05/24/2015/%E6%9A%B4%E5%8A%9B%E8%A7%A3%E5%86%B3wifi%E8%BF%9E%E4%B8%8D%E4%B8%8A%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2015/05/24/2015/暴力解决wifi连不上的方法/</id>
     <published>2015-05-23T16:00:00.000Z</published>
-    <updated>2015-06-06T16:00:00.000Z</updated>
+    <updated>2015-05-23T16:00:00.000Z</updated>
     
-    <content type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;进入到 /Library/Preferences/SystemConfiguration/ 目录下&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在打开的文件夹内，将下面所有文件删除（删除存在的文件，每次删除都需要输入密码）&lt;br&gt; com.apple.airport.preferences.plist&lt;br&gt; com.apple.network.identification.plist&lt;br&gt; NetworkInterfaces.plist&lt;br&gt; preferences.plist&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;清空废纸篓，重新启动Mac。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</content>
+    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1. 进入到 /Library/Preferences/SystemConfiguration/ 目录下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2. 在打开的文件夹内，将下面所有文件删除（删除存在的文件，每次删除都需要输入密码）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	com.apple.airport.preferences.plist&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	com.apple.network.identification.plist&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	NetworkInterfaces.plist&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	preferences.plist&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3. 清空废纸篓，重新启动Mac。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
     
     <summary type="html">
     
-      &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;进入到 /Library/Preferences/SystemConfiguration/ 目录下&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在打开的文件夹内，将下面所有文件删除（删除存在的文件，每次删除都需要输入密码）&lt;br&gt; com.apple.airport
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
     
     </summary>
     
@@ -196,30 +296,22 @@
   
   <entry>
     <title>打包生成IPA包时遇到错误:missing ios distribution signing identity for XXXXXXXXXX</title>
-    <link href="http://yoursite.com/2015/03/04/%E6%89%93%E5%8C%85%E7%94%9F%E6%88%90ipa%E5%8C%85%E6%97%B6%E9%81%87%E5%88%B0%E9%94%99%E8%AF%AF:missing_ios_distribution_signing_identity_for_xxxxxxxxxx/"/>
-    <id>http://yoursite.com/2015/03/04/打包生成ipa包时遇到错误:missing_ios_distribution_signing_identity_for_xxxxxxxxxx/</id>
+    <link href="http://yoursite.com/2015/03/04/2015/%E6%89%93%E5%8C%85%E7%94%9F%E6%88%90ipa%E5%8C%85%E6%97%B6%E9%81%87%E5%88%B0%E9%94%99%E8%AF%AF:missing_ios_distribution_signing_identity_for_xxxxxxxxxx/"/>
+    <id>http://yoursite.com/2015/03/04/2015/打包生成ipa包时遇到错误:missing_ios_distribution_signing_identity_for_xxxxxxxxxx/</id>
     <published>2015-03-03T16:00:00.000Z</published>
     <updated>2015-04-03T16:00:00.000Z</updated>
     
     <content type="html">&lt;p&gt;解决方法: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;首先，去此官方证书链接: &lt;a href=&quot;https://developer.apple.com/certificationauthority/AppleWWDRCA.cer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://developer.apple.com/certificationauthority/AppleWWDRCA.cer&lt;/a&gt;,下载文件，并双击安装证书。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;然后进入钥匙串 选择菜单栏的显示 - 显示已过期证书&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;然后在钥匙串 -（登录和系统中查看）  可以看到Apple WorldWide Developer Relations CertXXXXXXX (并且显示此证书已过去)删除即可&lt;/p&gt;
+&lt;p&gt;1.首先，去此链接: &lt;a href=&quot;https://developer.apple.com/certificationauthority/AppleWWDRCA.cer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@官方链接https://developer.apple.com/certificationauthority/AppleWWDRCA.cer&lt;/a&gt;,下载文件，并双击安装。&lt;/p&gt;
+&lt;p&gt;2.然后进入钥匙串 选择菜单栏的显示 - 显示已过期证书&lt;/p&gt;
+&lt;p&gt;3.然后在钥匙串 -（登录和系统中查看）  可以看到Apple WorldWide Developer Relations CertXXXXXXX (并且显示此证书已过去)删除即可&lt;/p&gt;
 &lt;p&gt;不一定（登录和系统）都有此证书。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 </content>
     
     <summary type="html">
     
       &lt;p&gt;解决方法: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;首先，去此官方证书链接: &lt;a href=&quot;https://developer.apple.com/certificationauthority/AppleWWDRCA.cer&quot; target=&quot;_blank&quot; rel=&quot;ext
+&lt;p&gt;1.首先，去此链接: &lt;a href=&quot;https://developer.apple.com/certificationauthority/AppleWWDRCA.cer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@官方链
     
     </summary>
     
@@ -228,32 +320,21 @@
   
   <entry>
     <title>解决多个模拟器的问题</title>
-    <link href="http://yoursite.com/2014/11/22/%E8%A7%A3%E5%86%B3%E5%A4%9A%E4%B8%AA%E6%A8%A1%E6%8B%9F%E5%99%A8%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2014/11/22/解决多个模拟器的问题/</id>
+    <link href="http://yoursite.com/2014/11/22/2014/%E8%A7%A3%E5%86%B3%E5%A4%9A%E4%B8%AA%E6%A8%A1%E6%8B%9F%E5%99%A8%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2014/11/22/2014/解决多个模拟器的问题/</id>
     <published>2014-11-21T16:00:00.000Z</published>
-    <updated>2014-11-26T16:00:00.000Z</updated>
+    <updated>2014-11-21T16:00:00.000Z</updated>
     
-    <content type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;关闭xcode&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;终端输入 sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService 输入你的电脑密码&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;终端输入 rm -rf ~/Library/Developer/CoreSimulator/Devices&lt;/li&gt;
-&lt;/ol&gt;
+    <content type="html">&lt;p&gt;1.关闭xcode&lt;/p&gt;
+&lt;p&gt;2.终端输入 sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService 输入你的电脑密码&lt;/p&gt;
+&lt;p&gt;3.终端输入 rm -rf ~/Library/Developer/CoreSimulator/Devices&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;关闭xcode&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;终端输入 sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService 输入你的电脑密码&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;终端输
+      &lt;p&gt;1.关闭xcode&lt;/p&gt;
+&lt;p&gt;2.终端输入 sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService 输入你的电脑密码&lt;/p&gt;
+&lt;p&gt;3.终端输入 rm -rf ~/Library/Developer/Co
     
     </summary>
     
@@ -262,8 +343,8 @@
   
   <entry>
     <title>Linux下统计代码行数</title>
-    <link href="http://yoursite.com/2014/06/14/linux%E4%B8%8B%E7%BB%9F%E8%AE%A1%E4%BB%A3%E7%A0%81%E8%A1%8C%E6%95%B0/"/>
-    <id>http://yoursite.com/2014/06/14/linux下统计代码行数/</id>
+    <link href="http://yoursite.com/2014/06/14/2014/linux%E4%B8%8B%E7%BB%9F%E8%AE%A1%E4%BB%A3%E7%A0%81%E8%A1%8C%E6%95%B0/"/>
+    <id>http://yoursite.com/2014/06/14/2014/linux下统计代码行数/</id>
     <published>2014-06-13T16:00:00.000Z</published>
     <updated>2014-06-13T16:00:00.000Z</updated>
     
@@ -284,17 +365,250 @@
   </entry>
   
   <entry>
+    <title>iOS系统框架介绍--CocoaTouch层</title>
+    <link href="http://yoursite.com/2014/04/02/2014/iOS%E7%B3%BB%E7%BB%9F%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D--CocoaTouch%E5%B1%82/"/>
+    <id>http://yoursite.com/2014/04/02/2014/iOS系统框架介绍--CocoaTouch层/</id>
+    <published>2014-04-01T16:00:00.000Z</published>
+    <updated>2014-04-01T16:00:00.000Z</updated>
+    
+    <content type="html">&lt;p&gt;iOS 操作系统是 iPhone、 iPod touch 以及 iPad 设备的核心。作为一名iOS开发工程师，很有必要去对iOS平台进行一定的了解，构建 iOS 平台的知识与 Mac OS X 系统同出一辙，iOS 平台的许多开发工具和开发技术也源自 Mac OS X。但开发者无须具备 Mac OS X 开发经验就可以编写 iOS 应用程序。iPhone 软件开发包（SDK）为着手创建 iOS 应用程序提供所需要的一切。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;我们首先来看看iOS系统构架图：&lt;br&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/78383844.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;从图中我们可以看出iOS实现可以看作是多个层的集合，底层为所有应用程序提供基础服务，高层则包含一些复杂巧妙的服务和技术。接下来，我们相对应的层次看看都有哪些系统框架，并逐渐了解这些系统框架。&lt;/p&gt;
+&lt;h3 id=&quot;Cocoa-Touch层：&quot;&gt;&lt;a href=&quot;#Cocoa-Touch层：&quot; class=&quot;headerlink&quot; title=&quot;Cocoa Touch层：&quot;&gt;&lt;/a&gt;Cocoa Touch层：&lt;/h3&gt;&lt;h5 id=&quot;Address-Book-UI-框架&quot;&gt;&lt;a href=&quot;#Address-Book-UI-框架&quot; class=&quot;headerlink&quot; title=&quot;Address Book UI 框架&quot;&gt;&lt;/a&gt;Address Book UI 框架&lt;/h5&gt;&lt;p&gt;Address Book UI 框架(AddressBookUI.framework)是一套Objective-C的编程接口，可以显示创建或者编辑联系人的标准系统界面。该框架简化了应用程序显示联系人信息所需的工作，另外它也可以确保应用程序使用的界面和其他应用程序相同，进而保证跨平台一致性。&lt;/p&gt;
+&lt;h5 id=&quot;Event-Kit-UI-框架&quot;&gt;&lt;a href=&quot;#Event-Kit-UI-框架&quot; class=&quot;headerlink&quot; title=&quot;Event Kit UI 框架&quot;&gt;&lt;/a&gt;Event Kit UI 框架&lt;/h5&gt;&lt;p&gt;iOS 4.0引入了Event Kit UI框架（EventKitUI.framework），它提供一个视图控制键可以展现查看并编辑事件的标准系统界面。Event Kit框架（查看“Event Kit框架”可获得该框架的进一步信息）的事件数据是该框架的构建基础。&lt;/p&gt;
+&lt;h5 id=&quot;Game-Kit-框架&quot;&gt;&lt;a href=&quot;#Game-Kit-框架&quot; class=&quot;headerlink&quot; title=&quot;Game Kit 框架&quot;&gt;&lt;/a&gt;Game Kit 框架&lt;/h5&gt;&lt;p&gt;iOS 3.0引入了Game Kit框架(GameKit.framework)。该框架支持点对点连接及游戏内语音功能，您可以通过该框架为应用程序增加点对点网络功能。点对点连接以及游戏内语音功能在多玩家的游戏中非常普遍，不过您也可以考虑将其加入到非游戏应用程序。此框架通过一组建构于Bonjour之上的简单而强大的类提供网络功能，这些类将许多网络细节抽象出来，从而让没有网络编程经验的开发者可以更加容易地将网络功能整合到应用程序。&lt;/p&gt;
+&lt;h5 id=&quot;iAd-框架&quot;&gt;&lt;a href=&quot;#iAd-框架&quot; class=&quot;headerlink&quot; title=&quot;iAd 框架&quot;&gt;&lt;/a&gt;iAd 框架&lt;/h5&gt;&lt;p&gt;iOS 4.0引入了iAd框架 (iAd.framework)。您可以通过该框架在应用程序中发布横幅广告。广告会被放入到标准视图，您可以将这些视图加入到用户界面，并在合适的时机向用户展现。这些视图和苹果的公告服务相互协作，自动处理广告内容的加载和展现，同时也可以响应用户对广告的点击。&lt;/p&gt;
+&lt;h5 id=&quot;Map-Kit-框架&quot;&gt;&lt;a href=&quot;#Map-Kit-框架&quot; class=&quot;headerlink&quot; title=&quot;Map Kit 框架&quot;&gt;&lt;/a&gt;Map Kit 框架&lt;/h5&gt;&lt;p&gt;iOS 3.0导入了 Map Kit框架 (MapKit.framework) ，该框架供一个可被嵌入到应用程序的地图界面，该界面包含一个可以滚动的地图视图。您可以在视图中添加定制信息，并可将其嵌入到应用程序视图，通过编程的方式设置地图的各种属性（包括当前地图显示的区域以及用户的方位）。您也可以使用定制标注或标准标注（例如使用测针标记）突出显示地图中的某些区域或额外的信息。&lt;/p&gt;
+&lt;p&gt;在iOS 4.0系统中，该框架开始支持可拖动标注以及定制覆盖层。可拖动标注允许您通过编程方式或通过用户交互方式重定位某个标注的位置。覆盖层可用于创建多个点组成的复杂地图标注。地图表面诸如公交路线、选举地图、公园边界或者气象信息（例如雷达数据）等可以使用覆盖层进行显示。&lt;/p&gt;
+&lt;h5 id=&quot;Message-UI-框架&quot;&gt;&lt;a href=&quot;#Message-UI-框架&quot; class=&quot;headerlink&quot; title=&quot;Message UI 框架&quot;&gt;&lt;/a&gt;Message UI 框架&lt;/h5&gt;&lt;p&gt;iOS 3.0引入了Message UI框架 (MessageUI.framework)。您可以利用该框架撰写电子邮件，并将其放入到用户的发件箱排队等候发送。该框架提供一个视图控制器界面，您可以在应用程序中展现该界面，让用户通过该界面撰写邮件。界面的字段可以根据待发送信息的内容生成。例如您可以设置接收人、主题、邮件内容并可以在邮件中包含附件。这个界面允许用户先对邮件进行编辑，然后再选择接受。在用户接受邮件内容后，相应的邮件就会放入用户的发件箱排队等候发送。&lt;/p&gt;
+&lt;p&gt;在iOS 4.0及其后续的系统中，该框架提供一个SMS撰写面板控制器。您可以通过它在应用程序中直接创建并编辑SMS信息（无需离开应用程序）。和电子邮件撰写界面一样，该界面也允许用户先编辑SMS信息再发送。&lt;/p&gt;
+&lt;h5 id=&quot;UIKit-框架&quot;&gt;&lt;a href=&quot;#UIKit-框架&quot; class=&quot;headerlink&quot; title=&quot;UIKit 框架&quot;&gt;&lt;/a&gt;UIKit 框架&lt;/h5&gt;&lt;p&gt;UIKit框架 (UIKit.framework)的Objective-C编程接口为实现iOS应用程序的图形及事件驱动提供关键基础。iOS系统所有程序都需要通过该框架实现下述核心功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用程序管理&lt;/li&gt;
+&lt;li&gt;用户界面管理&lt;/li&gt;
+&lt;li&gt;图形和窗口支持&lt;/li&gt;
+&lt;li&gt;多任务支持&lt;/li&gt;
+&lt;li&gt;处理触摸及移动事件。&lt;/li&gt;
+&lt;li&gt;代表标准系统视图和控件的对象&lt;/li&gt;
+&lt;li&gt;文本和web内容相关操作&lt;/li&gt;
+&lt;li&gt;剪切、复制以及粘贴&lt;/li&gt;
+&lt;li&gt;使用动画显示用户界面内容&lt;/li&gt;
+&lt;li&gt;通过URL方式将其他应用程序整合到系统&lt;/li&gt;
+&lt;li&gt;苹果推送通知服务支持，请查看“苹果推送通知服务 ”&lt;/li&gt;
+&lt;li&gt;为残疾用户提供辅助功能&lt;/li&gt;
+&lt;li&gt;本地通知的调度和发送&lt;/li&gt;
+&lt;li&gt;创建PDF&lt;/li&gt;
+&lt;li&gt;使用定制输入视图（其行为类似系统键盘）&lt;/li&gt;
+&lt;li&gt;创建和系统键盘进行交互的定制文本视图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;除了链编至应用程序的基础代码，UIKit还为下述和设备紧密相连的功能提供支持：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加速器数据&lt;/li&gt;
+&lt;li&gt;内置相机（存在相机的设备）&lt;/li&gt;
+&lt;li&gt;用户的图片库&lt;/li&gt;
+&lt;li&gt;设备名称和模型信息&lt;/li&gt;
+&lt;li&gt;电池状态信息&lt;/li&gt;
+&lt;li&gt;距离感应器信息&lt;/li&gt;
+&lt;li&gt;来自绑定听筒的远程控制信息&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;iOS 操作系统是 iPhone、 iPod touch 以及 iPad 设备的核心。作为一名iOS开发工程师，很有必要去对iOS平台进行一定的了解，构建 iOS 平台的知识与 Mac OS X 系统同出一辙，iOS 平台的许多开发工具和开发技术也源自 Mac OS X。但开发者无须具备 Mac OS X 开发经验就可以编写 iOS 应用程序。iPhone 软件开发包（SDK）为着手创建 iOS 应用程序提供所需要的一切。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Mac显示隐藏文件命令</title>
-    <link href="http://yoursite.com/2014/03/24/mac%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com/2014/03/24/mac显示隐藏文件命令/</id>
+    <link href="http://yoursite.com/2014/03/24/2014/mac%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2014/03/24/2014/mac显示隐藏文件命令/</id>
     <published>2014-03-23T16:00:00.000Z</published>
-    <updated>2015-06-06T16:00:00.000Z</updated>
+    <updated>2014-03-23T16:00:00.000Z</updated>
     
     <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;defaults write com.apple.finder AppleShowAllFiles -bool true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;killall Finder&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
     
     <summary type="html">
     
       &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>轻松在mac上配置svn服务器</title>
+    <link href="http://yoursite.com/2014/03/06/2014/%E8%BD%BB%E6%9D%BE%E5%9C%A8mac%E4%B8%8A%E9%85%8D%E7%BD%AEsvn%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>http://yoursite.com/2014/03/06/2014/轻松在mac上配置svn服务器/</id>
+    <published>2014-03-05T16:00:00.000Z</published>
+    <updated>2014-03-05T16:00:00.000Z</updated>
+    
+    <content type="html">&lt;p&gt;最近在项目中需要用到SVN服务器方便与同事一起协同开发，在Windows环境中，我们一般使用TortoiseSVN来搭建svn环境。但是在mac环境中，由于Mac自带了svn的服务器端和客户端功能，因此我们可以直接使用Mac中自带的服务器。虽然说这省去了我们在Mac上搭建svn的繁琐操作，但我们仍需要对Mac自带的svn服务器做一定的配置。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;话不多说，首先选择好一个存放svn的路径，新建一个svn目录，以后可以在svn目录下创建多个仓库目录，我们在桌面新建文件夹macSVN，当前里面什么也没有。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/50214323.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;打开终端，直接上代码：svnadmin create /Users/ios/Desktop/macSVN/project1 &lt;/p&gt;
+&lt;p&gt;创建成功，打开我们新建的文件夹发现里面有东西了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/88527922.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我们的配置就是针对conf里面的文件来的。打开conf发现里面有3个文件，分别是authz、passwd、svnserve.conf。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/9724100.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;(1)首先用文本编辑打开svnserve.conf。找到下图中红色框中的内容，将前面的#和空格都去掉。这里解释一下这些是什么意思：anon-access ＝ read 代表匿名访问时是只读，anon-access ＝ write 是写，若我们设置为anon-access ＝ none 则服务器是不允许匿名访问的。&lt;br&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/25672593.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;(2) 用文本编辑打开passwd，在[users]下面添加账号密码，这里我们添加三个账户。&lt;br&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/92821588.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;(3) 用文本编辑打开authz，配置用户组和权限。&lt;/p&gt;
+&lt;p&gt;我们可以将在passwd里添加的用户分配到不同的用户组里，以后的话，就可以对不同用户组设置不同的权限，没有必要对每个用户进行单独设置权限。&lt;/p&gt;
+&lt;p&gt;在[groups]下面添加组名和用户名，多个用户之间用逗号(,)隔开，这里我们把用户keyzhang、fuqinglin分组为group1，admin分组为group2.&lt;/p&gt;
+&lt;p&gt;使用[/]代表svn服务器中的所有资源库,下面这3行命令说明组group1中用户对svn服务器中所有资源有读写权限，group2中用户只有读的权限。这是针对组的权限设置，我们也可以单独对用户权限进行设置，方法跟组是一样的，只是不需要前面的@符号，至于其他精细的权限控制，可以参考authz文件中的其他内容。&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/53128979.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;（4）启动svn&lt;/p&gt;
+&lt;p&gt;在终端输入：svnserve -d -r /Users/ios/Desktop/macSVN/project1,没有任何提示就ok啦。&lt;br&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/90683472.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;（5）关闭svn&lt;/p&gt;
+&lt;p&gt;svn的关闭是非常简单的。在终端中输入ps aux | grep svn。可以看到当前目录下的svn进程pid是2077。然后kill -9 2077    杀死这个查找到的svn进程，这样svn就关闭了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/46377757.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-1/88262985.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这样，在mac上配置svn服务器就完成了。至于选择什么样的svn客户端这个就有很多选择了，xcode上自带了svn客户端，不过不太好用，个人推荐使用cornerstone或者versions。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在项目中需要用到SVN服务器方便与同事一起协同开发，在Windows环境中，我们一般使用TortoiseSVN来搭建svn环境。但是在mac环境中，由于Mac自带了svn的服务器端和客户端功能，因此我们可以直接使用Mac中自带的服务器。虽然说这省去了我们在Mac上搭建svn的繁琐操作，但我们仍需要对Mac自带的svn服务器做一定的配置。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>IOS项目自动生成技术文档</title>
+    <link href="http://yoursite.com/2014/02/09/2014/iOS%E9%A1%B9%E7%9B%AE%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+    <id>http://yoursite.com/2014/02/09/2014/iOS项目自动生成技术文档/</id>
+    <published>2014-02-08T16:00:00.000Z</published>
+    <updated>2014-02-08T16:00:00.000Z</updated>
+    
+    <content type="html">&lt;p&gt;做项目一般都会要求写技术文档，特别是单干接项目的，客户多少都会要求除了提供code之外，还得提供技术文档，而如果我们手写这类的文档，那工作量不比写code少。一般的开发工具都会提供类似集成的功能，比如Java语言本身就自带javadoc命令，可以从源码中抽取文档，几个配置，几条命令就搞定了。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;Xcode工具本身不具备这样的功能，但是我们通过一些插件和工具来达到这个目的。&lt;/p&gt;
+&lt;h3 id=&quot;生成注释&quot;&gt;&lt;a href=&quot;#生成注释&quot; class=&quot;headerlink&quot; title=&quot;生成注释&quot;&gt;&lt;/a&gt;生成注释&lt;/h3&gt;&lt;p&gt;生成文档之前，我们需要给代码中的方法或者变量写上注释，然后再利用工具根据这些规范的注释自动生成文档。所以呢，注释一定要规范统一，但是每次都要手动输入规范化的注释，着实也麻烦，这里需要借助Xcode的开源插件VVDocumenter，规范注释生成器，非常方便！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xrn7f.com1.z0.glb.clouddn.com/16-6-1/48538434.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;多行注释直接输入三个斜线 “///“ 会自动格式化，如上图所示&lt;/p&gt;
+&lt;p&gt;单行注释需要输入三个斜线+空格 “/// 注释”。输入两个“//”当然可以正确的被xcode识别为注释，但是在下面生成文档的时候不能被识别为文档注释。&lt;/p&gt;
+&lt;p&gt;然后再配合 appledoc 、doxygen 或者 headdoc，就可以生成技术文档。&lt;/p&gt;
+&lt;p&gt;对于Objective-C来说，目前比较好用的是appledoc 和 doxygen。&lt;/p&gt;
+&lt;h3 id=&quot;工具对比&quot;&gt;&lt;a href=&quot;#工具对比&quot; class=&quot;headerlink&quot; title=&quot;工具对比&quot;&gt;&lt;/a&gt;工具对比&lt;/h3&gt;&lt;h5 id=&quot;headerdoc&quot;&gt;&lt;a href=&quot;#headerdoc&quot; class=&quot;headerlink&quot; title=&quot;headerdoc&quot;&gt;&lt;/a&gt;headerdoc&lt;/h5&gt;&lt;p&gt;xcode 自带的文档生成工具、基于命令行的操作、使用方便。但是只能生成以 /&lt;em&gt;* ! &lt;/em&gt;/ 的格式的注释。还有一个缺点是每个类文件对应一个注释文件，没有最后汇总导航的index文件。&lt;/p&gt;
+&lt;h5 id=&quot;docxygen&quot;&gt;&lt;a href=&quot;#docxygen&quot; class=&quot;headerlink&quot; title=&quot;docxygen&quot;&gt;&lt;/a&gt;docxygen&lt;/h5&gt;&lt;p&gt;功能强大、三者中支持语言最多的、无headerdoc缺点、基于图形化的操作界面，但是配置较多，可以生成html文档或pdf文档。&lt;/p&gt;
+&lt;h5 id=&quot;appledoc&quot;&gt;&lt;a href=&quot;#appledoc&quot; class=&quot;headerlink&quot; title=&quot;appledoc&quot;&gt;&lt;/a&gt;appledoc&lt;/h5&gt;&lt;p&gt;基于命令行的操作、使用方便、无headerdoc缺点、默认生成的文档风格和苹果的官方文档是一致的，即docset，集成到xcode中就跟苹果的官方文档一模一样，在源码中按住option再单击就可以调出相应方法的帮助。当然也可以生成html文档。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;做项目一般都会要求写技术文档，特别是单干接项目的，客户多少都会要求除了提供code之外，还得提供技术文档，而如果我们手写这类的文档，那工作量不比写code少。一般的开发工具都会提供类似集成的功能，比如Java语言本身就自带javadoc命令，可以从源码中抽取文档，几个配置，几条命令就搞定了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>iOS7适配坐标问题</title>
+    <link href="http://yoursite.com/2014/01/18/2014/iOS7%E9%80%82%E9%85%8D%E5%9D%90%E6%A0%87%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2014/01/18/2014/iOS7适配坐标问题/</id>
+    <published>2014-01-17T16:00:00.000Z</published>
+    <updated>2014-01-17T16:00:00.000Z</updated>
+    
+    <content type="html">&lt;p&gt;最近在准备项目当中，安装了xcode5后发现多多少少有些不适应，有些功能用起来还不是特别习惯。其次，IOS7的适配问题也很是让人头痛，在网上看了一些资料和下了一些Demo总算了有点头绪了，总结起来有以下几点，希望自己在以后的项目中注意。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h5 id=&quot;一、原点坐标问题&quot;&gt;&lt;a href=&quot;#一、原点坐标问题&quot; class=&quot;headerlink&quot; title=&quot;一、原点坐标问题&quot;&gt;&lt;/a&gt;一、原点坐标问题&lt;/h5&gt;&lt;p&gt;以前在写xy坐标时都是在状态栏或者导航栏下，现在一律统一到屏幕的左上角了，那么状态栏要不要是个问题。&lt;/p&gt;
+&lt;p&gt;需要隐藏状态栏：在IOS7以前我们只需要执行以下代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[UIApplication  sharedApplication].statusBarHidden = YES;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可这段代码在IOS7上行不通！在IOS7上隐藏状态栏有两种方法：&lt;/p&gt;
+&lt;p&gt;//方法一（代码设置）：&lt;/p&gt;
+&lt;p&gt;在uiviewcontroller的子类下，调用：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if ([selfrespondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+    [selfprefersStatusBarHidden];     }
+- (BOOL)prefersStatusBarHidden {    returnYES; }    
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在视图切换，比如addsubview，present，pushin等，也需要注意及修改该状态栏。&lt;/p&gt;
+&lt;p&gt;//方法二（在plist里设置）：对ios7以下都适用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;首先设置key：Status bar is initially hidden&lt;/strong&gt;    为YES&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然后设置key：View controller-based status bar appearance&lt;/strong&gt;  为NO&lt;/p&gt;
+&lt;p&gt;即可实现全局隐藏状态栏了 &lt;/p&gt;
+&lt;p&gt;如果不需要隐藏状态栏而又想给状态栏留位置那就只得改变view的坐标了，如果使用lib的话可以直接选择所有控件，在布局界面中有个iOS6/7 Deltas偏移量，修改y坐标偏移量即可。&lt;/p&gt;
+&lt;h5 id=&quot;二、UIScrollerView类顶部和底部预留空白的问题&quot;&gt;&lt;a href=&quot;#二、UIScrollerView类顶部和底部预留空白的问题&quot; class=&quot;headerlink&quot; title=&quot;二、UIScrollerView类顶部和底部预留空白的问题&quot;&gt;&lt;/a&gt;二、UIScrollerView类顶部和底部预留空白的问题&lt;/h5&gt;&lt;p&gt;由于IOS7中状态栏和导航栏以及底部的标签栏都是半透明效果，所以系统会默认为在视图控制器的视图上的所添加的UIScrollerView（包括其子类）预留空白位置，这个我们通过滑动条可以看到，那么这样我们就会发现一个问题：如果我们的UIScrollerView的origin不设置为（0，0）那么还是会预留20或者64的高度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如何解决：&lt;/strong&gt;在UIViewController中有一个automaticallyAdjustsScrollViewInsets这样的属性控制，返回Yes表示预留空白。但是有一点非常重要，一个控制器中，出现UIScrollerView（包括其子类），必须是第一个添加到控制器的视图才会预留空白，这里的第一个是相对于所有的子视图，不仅仅是其他UIScrollerView（包括其子类）。因此，如果一个视图控制器中出现了两个以上的UIScrollerView类，那么automaticallyAdjustsScrollViewInsets属性需要设置为NO，即不会预留空白，那么这个控制器中所有的UIScrollerView类都需要重新设置坐标。当然，方法应该还有很多，在网上看到说self.navigationController.navigationBar.translucent = NO;这样貌似也能达到效果。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在准备项目当中，安装了xcode5后发现多多少少有些不适应，有些功能用起来还不是特别习惯。其次，IOS7的适配问题也很是让人头痛，在网上看了一些资料和下了一些Demo总算了有点头绪了，总结起来有以下几点，希望自己在以后的项目中注意。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>iOS里的MVC</title>
+    <link href="http://yoursite.com/2013/09/13/2013/iOS%E9%87%8C%E7%9A%84MVC/"/>
+    <id>http://yoursite.com/2013/09/13/2013/iOS里的MVC/</id>
+    <published>2013-09-12T16:00:00.000Z</published>
+    <updated>2013-09-12T16:00:00.000Z</updated>
+    
+    <content type="html">&lt;p&gt;我们今天谈谈cocoa程序设计中的 模型－视图－控制器（MVC）范型。我们将从两大方面来讨论MVC：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;什么是MVC？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;M、V、C之间的交流方式是什么样子的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;理解了MVC的概念，对cocoa程序开发是至关重要的。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h5 id=&quot;一、MVC的概念&quot;&gt;&lt;a href=&quot;#一、MVC的概念&quot; class=&quot;headerlink&quot; title=&quot;一、MVC的概念&quot;&gt;&lt;/a&gt;一、MVC的概念&lt;/h5&gt;&lt;p&gt;MVC是Model-VIew-Controller，就是模型－视图－控制器，这些都是什么东西呢？&lt;/p&gt;
+&lt;p&gt;MVC把软件系统分为三个部分：Model，View，Controller。在cocoa中，你的程序中的每一个object（对象）都将明显地仅属于这三部分中的一个，而完全不属于另外两个。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Model&lt;/strong&gt; = 你的程序是什么(而不是你的程序是如何显示的)&lt;/p&gt;
+&lt;p&gt;让我们举个例子，我们上中学的时候，我们的步步高电子词典中有个游戏叫“雷霆战机”，也就是“打飞机”的游戏，Model就是：你的小飞机的攻击力是多少？你的小飞机上装的是什么武器，炮弹，导弹，还是激光炮？你的小飞机还有多少血？等等。再概括点说，就是你的程序将要实现的功能，或者是它所能干的事情。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Controller&lt;/strong&gt; = 如何使你的模型呈现给用户(程序逻辑)&lt;/p&gt;
+&lt;p&gt;Controller是程序内部的逻辑，大多情况下你将看不到它，它将Model和View捆绑在一起，它将处理用户的输入，例如，你按开炮的键子，Controller就会通过内部的逻辑来处理你的要求，并在屏幕上做出相应的显示，你将看到屏幕上的小飞机发出炮弹击中敌机。这也是Controller控制View的显示的例子。所以你可以把Controller看成是连接M和V的桥梁。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;View&lt;/strong&gt; ＝ 在屏幕上你所看到的（是你的Controller的“奴才”）&lt;/p&gt;
+&lt;p&gt;接着前面的小飞机，View就是：你的小飞机是什么样子的，有一个还是两个翅膀，有几挺枪炮；还有，你的飞机在屏幕上的位置等等。总之，你在屏幕上看到的组件都可以归类为View。&lt;/p&gt;
+&lt;p&gt;MVC可以帮助确保帮助实现程序最大程度的可重用性。各MVC元素彼此独立运作，通过分开这些元素，可以构建可维护，可独立更新的程序组建。&lt;/p&gt;
+&lt;h5 id=&quot;二、M-V-C之间的交流模式&quot;&gt;&lt;a href=&quot;#二、M-V-C之间的交流模式&quot; class=&quot;headerlink&quot; title=&quot;二、M V C之间的交流模式&quot;&gt;&lt;/a&gt;二、M V C之间的交流模式&lt;/h5&gt;&lt;p&gt;好了，现在我们来讨论MVC中各个元素之间的交流方式。&lt;/p&gt;
+&lt;p&gt;我们把程序分成三个部分，但并不希望他们完全独立，因为那样的话，我们的程序将毫无意义和功能而言。它们之间必然存在某种联系，使它们能有机的成为一个整体来实现各种强大的功能。而这种联系就是我们提到的交流方式。我们来看看下面的图，此图出自斯坦福大学CS193课程的课件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i2.buimg.com/5c13afab04cb1079.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;图中有几条线把这三部分划分开，有黄线，虚线，和白色的实线。我们把它们想象成路标。你可以看到，在M和V之间有两条黄线，这表示什么呢？它意味着你不能穿越这黄线，任何一个方向都不行。在图的上部，你可以看到白色的虚线，它意味着你可以自由的穿越它，只要是安全的。那白色的实线呢？它代表你可以穿越，但你必须要买票，或者交点过路费。&lt;/p&gt;
+&lt;p&gt;好了，如果你觉得前面的比喻没有使你明白的话，让我们来讲点实在的东西。&lt;/p&gt;
+&lt;p&gt;首先， 我们来看C和M之间的绿色箭头，这箭头的方向就代表着“发起对话”的方向，也就是说，发起对话的是C，而做出回答的是M。C可以问M各种各样的问题，但M只是回答C的问题或要求，它不可以主动的向C要求什么。还记得虚线是畅通无阻的意思吧，所以，C知道M的所有的事情,如果用代码来说明这件事情，就是说，C可以导入M的头文件或是M的接口（API）。因为C可以通过M的API，所以它就可以肆无忌惮的向M要求这要求那了。&lt;/p&gt;
+&lt;p&gt;我们再来看看另外的一个绿色箭头，它是在C和V之间，和前一个绿色箭头的意义一样，它代表C可以直接地向V进行交流。你可以想想，C要把V放到屏幕上，并设置V的属性，告诉它们什么时候从屏幕上消失，把它们分成组等等。如果C不能自由的向V发号施令的话，程序的显示将会多么的困难,所以，C可以毫无限制地向V说话。 &lt;/p&gt;
+&lt;p&gt;可能你已经注意到了，这个箭头上还有outlet(输出口)，outlet可以看作是从C指向V的指针，它在C中被定义。outlet给我们提供了很大的方便，它使我们在C的内部就可以轻松准确地向V施令。C可以拥有很多的outlet，可以不止一个，这也使它可以更高效的和V进行交流。&lt;/p&gt;
+&lt;p&gt;那M和V之间可以交流么？还记得黄线的意思么？完全不可以通过，所以我们是不允许M和V进行交流的。这是因为我们不希望这三部分之间有过多的交流，你想想，假如V在显示时出现了问题，比如有一个图形没有显示出来，我们就要去查找错误，因为C可以和V交流，M也可以和V交流的话，我们就要去检查两个部分。相反的，只有C可以和V交流的话，在出错时，我们就只需要去C那里查找原因，这样查找错误不就很是简单了么？所以，我们不允许M和V之间有直接的联系，这也是在它们两之间有两根黄线的原因。&lt;/p&gt;
+&lt;p&gt;好的应用程序要具备与用户交互的能力。如果没有良好的交互性，程序的功能将会受到很大的限制。在MVC中，V是和用户直接接触的，用户看不到M和C，所以，程序与用户的交互必须通过V来实现，但V只是视图而已，它并不能完全处理用户的要求，所以，这就要求V必须有某种手段来向C发送信息，移交用户的交互要求。这手段就是前面白色实线代表的过路费，你知道V不能知道C的一切，但它可以通过某种“手段”来和C进行交流，移交用户交互责任。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们接下来讨论V是如何向C发送信息的。V对C的交流有三种不同的方式。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第一种我们称为目标操作(target-action)。它是这样工作的，C会在自己的内部“悬挂”一个目标(target)，如图中的红白相间的靶子，对应的，它还会分发一个操作(action，如图中的黄色箭头)给将要和它交流的视图对象(可能是屏幕上的一个按钮)，当按钮被按时，action就会被发送给与之对应的target，这样V就可以和C交流了。但是在这种情况下，V只是知道发送action给对应的target,它并不知道C中的类，也不知道它到底发送了什么。target-action是我们经常使用的方法。&lt;/p&gt;
+&lt;p&gt;第二种方式我们叫做委托(delegate)。有时候，V需要和C进行同步，你知道，用户交互不仅仅是什么按按钮，划滑块，还有很多种形式。好了，让我们来看看图中的delegate黄色箭头，你发现箭头上又分出了四个小箭头：should，did，will，还有一个没标注的。绝大部分的delegate信息都是should，will，did这三种形式。和英文意思相对应，should代表视图对象将询问C中的某个对象“我应该这么做么？”，举个例子，有一个web视图，有人点击了一个链接，web视图就要问“我应该打开这个链接么？这样做安全么？”。这就是should信息。那will和did呢？will就是“我将要做这件事了”，did就是“我已经做了这件事”。C把自己设置为V的委托(delegate),它让V知道：如果V想知道更多的关于将如何显示的信息的话，就向C发送delegate信息。通过接受V发过来的delegate信息，C就会做出相应的协调和处理。还有一点，每个V只能有一个delegate。 &lt;/p&gt;
+&lt;p&gt;第三种方式就是数据源(datasource)，你知道，V不能拥有它所要显示的数据，记住这点非常重要。V希望别人帮助它管理将要显示的数据，当它需要数据时，它就会请求别人的帮助,把需要的数据给它。再者，iphone的屏幕很小，它不能显示包含大量信息的视图。看图中的datasource箭头，和delegate类似，V会发送cout，data，at信息给C来请求数据。&lt;/p&gt;
+&lt;p&gt;好了，这就是V给C发送信息的三种形式。&lt;/p&gt;
+&lt;p&gt;最后一个问题。你看到M和C之间的白线，这意味着M不可以直接地，没有限制的对C进行交流。但有时，这个方向的交流是必要的。当M中的一些东西发生变化时，C需要了解这些变化，那我们怎么才能让C知道M的变化呢？通知（Notification）和KVO是解决问题的好方法。它们是这样工作的，当M中的某些东西发生变化时，他们会向C发出通知“嘿，老兄，注意了啊，我这发生变化了”，或者他们会发出指向变化的指针给C，或其他什么的。总之，他们的工作模式是这样的。&lt;/p&gt;
+&lt;h5 id=&quot;三、iOS中MVC使用Tips&quot;&gt;&lt;a href=&quot;#三、iOS中MVC使用Tips&quot; class=&quot;headerlink&quot; title=&quot;三、iOS中MVC使用Tips&quot;&gt;&lt;/a&gt;三、iOS中MVC使用Tips&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Model不允许和Controller，View打交道。也就是Model根本不知道谁会用自己，Model中不能有任何对Controller和View的引用。正所谓：Don’t call me, I will call you.就是给Model设计说的。我们再想想，在一般程序中Model到处被拿去用，它要维护到底谁用真的很难。那你会问：兄弟，那当Model的数据变了，我怎么通知视图更新呢？这里常用的机制就是广播模式，或者电台模式，或者事件机制都行。在iOS中有两种支持机制：Notification和KVO（Key-Value Observing）。这两种东西原理差不多，KVO是iOS中的一个核心概念，简单理解就是：关注Model某个数据（Key）的对象可以注册为监听器，一旦Model某个Key的Value发生变化，就会广播给所有的监听器。这和Flex，JavaFX中的绑定都是一个道理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;View不允许直接引用Controller和Model，它很专一地被Controller控制来进行数据的显示和接收用户的交互。我们知道View显示的时候需要数据，我们也知道在View上会产生事件。如果要达到不和Controller，Model直接打交道，就需要机制来支持。在Objective－C中有Protocol的东西，并且提出Delegate（代理模式）就是来解决UIView想和Controller松耦合互动问题的。除了这个外，iOS还提供了Action－Target模式来让Controller监听View的事件。那对View如何获得数据，iOS中提了Data Source的概念，其实也是Protocol的应用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;每一次推给用户的一个操作屏幕，最好都是MVC的三者组合，不要出现一组以上的MVC组合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们今天谈谈cocoa程序设计中的 模型－视图－控制器（MVC）范型。我们将从两大方面来讨论MVC：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;什么是MVC？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;M、V、C之间的交流方式是什么样子的？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;理解了MVC的概念，对cocoa程序开发是至关重要的。&lt;/p&gt;
     
     </summary>
     

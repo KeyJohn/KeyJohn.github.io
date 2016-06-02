@@ -1,0 +1,689 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="我们今天谈谈cocoa程序设计中的 模型－视图－控制器（MVC）范型。我们将从两大方面来讨论MVC：
+
+什么是MVC？
+
+M、V、C之间的交流方式是什么样子的？
+
+
+理解了MVC的概念，对cocoa程序开发是至关重要的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS里的MVC">
+<meta property="og:url" content="http://yoursite.com/2013/09/13/2013/iOS里的MVC/index.html">
+<meta property="og:site_name" content="keyzhang">
+<meta property="og:description" content="我们今天谈谈cocoa程序设计中的 模型－视图－控制器（MVC）范型。我们将从两大方面来讨论MVC：
+
+什么是MVC？
+
+M、V、C之间的交流方式是什么样子的？
+
+
+理解了MVC的概念，对cocoa程序开发是至关重要的。">
+<meta property="og:image" content="http://i2.buimg.com/5c13afab04cb1079.jpg">
+<meta property="og:updated_time" content="2013-09-12T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS里的MVC">
+<meta name="twitter:description" content="我们今天谈谈cocoa程序设计中的 模型－视图－控制器（MVC）范型。我们将从两大方面来讨论MVC：
+
+什么是MVC？
+
+M、V、C之间的交流方式是什么样子的？
+
+
+理解了MVC的概念，对cocoa程序开发是至关重要的。">
+<meta name="twitter:image" content="http://i2.buimg.com/5c13afab04cb1079.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> iOS里的MVC | keyzhang </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?a178e1666ee6159ce095ddb1e4d1230d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">keyzhang</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">业精于勤荒于嬉，行成于思毁于随</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS里的MVC
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-09-13T00:00:00+08:00" content="2013-09-13">
+              2013-09-13
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2013/09/13/2013/iOS里的MVC/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2013/09/13/2013/iOS里的MVC/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>我们今天谈谈cocoa程序设计中的 模型－视图－控制器（MVC）范型。我们将从两大方面来讨论MVC：</p>
+<ol>
+<li><p>什么是MVC？</p>
+</li>
+<li><p>M、V、C之间的交流方式是什么样子的？</p>
+</li>
+</ol>
+<p>理解了MVC的概念，对cocoa程序开发是至关重要的。</p>
+<a id="more"></a>
+<h5 id="一、MVC的概念"><a href="#一、MVC的概念" class="headerlink" title="一、MVC的概念"></a>一、MVC的概念</h5><p>MVC是Model-VIew-Controller，就是模型－视图－控制器，这些都是什么东西呢？</p>
+<p>MVC把软件系统分为三个部分：Model，View，Controller。在cocoa中，你的程序中的每一个object（对象）都将明显地仅属于这三部分中的一个，而完全不属于另外两个。</p>
+<p><strong>Model</strong> = 你的程序是什么(而不是你的程序是如何显示的)</p>
+<p>让我们举个例子，我们上中学的时候，我们的步步高电子词典中有个游戏叫“雷霆战机”，也就是“打飞机”的游戏，Model就是：你的小飞机的攻击力是多少？你的小飞机上装的是什么武器，炮弹，导弹，还是激光炮？你的小飞机还有多少血？等等。再概括点说，就是你的程序将要实现的功能，或者是它所能干的事情。</p>
+<p><strong>Controller</strong> = 如何使你的模型呈现给用户(程序逻辑)</p>
+<p>Controller是程序内部的逻辑，大多情况下你将看不到它，它将Model和View捆绑在一起，它将处理用户的输入，例如，你按开炮的键子，Controller就会通过内部的逻辑来处理你的要求，并在屏幕上做出相应的显示，你将看到屏幕上的小飞机发出炮弹击中敌机。这也是Controller控制View的显示的例子。所以你可以把Controller看成是连接M和V的桥梁。</p>
+<p><strong>View</strong> ＝ 在屏幕上你所看到的（是你的Controller的“奴才”）</p>
+<p>接着前面的小飞机，View就是：你的小飞机是什么样子的，有一个还是两个翅膀，有几挺枪炮；还有，你的飞机在屏幕上的位置等等。总之，你在屏幕上看到的组件都可以归类为View。</p>
+<p>MVC可以帮助确保帮助实现程序最大程度的可重用性。各MVC元素彼此独立运作，通过分开这些元素，可以构建可维护，可独立更新的程序组建。</p>
+<h5 id="二、M-V-C之间的交流模式"><a href="#二、M-V-C之间的交流模式" class="headerlink" title="二、M V C之间的交流模式"></a>二、M V C之间的交流模式</h5><p>好了，现在我们来讨论MVC中各个元素之间的交流方式。</p>
+<p>我们把程序分成三个部分，但并不希望他们完全独立，因为那样的话，我们的程序将毫无意义和功能而言。它们之间必然存在某种联系，使它们能有机的成为一个整体来实现各种强大的功能。而这种联系就是我们提到的交流方式。我们来看看下面的图，此图出自斯坦福大学CS193课程的课件。</p>
+<p><img src="http://i2.buimg.com/5c13afab04cb1079.jpg" alt=""></p>
+<p>图中有几条线把这三部分划分开，有黄线，虚线，和白色的实线。我们把它们想象成路标。你可以看到，在M和V之间有两条黄线，这表示什么呢？它意味着你不能穿越这黄线，任何一个方向都不行。在图的上部，你可以看到白色的虚线，它意味着你可以自由的穿越它，只要是安全的。那白色的实线呢？它代表你可以穿越，但你必须要买票，或者交点过路费。</p>
+<p>好了，如果你觉得前面的比喻没有使你明白的话，让我们来讲点实在的东西。</p>
+<p>首先， 我们来看C和M之间的绿色箭头，这箭头的方向就代表着“发起对话”的方向，也就是说，发起对话的是C，而做出回答的是M。C可以问M各种各样的问题，但M只是回答C的问题或要求，它不可以主动的向C要求什么。还记得虚线是畅通无阻的意思吧，所以，C知道M的所有的事情,如果用代码来说明这件事情，就是说，C可以导入M的头文件或是M的接口（API）。因为C可以通过M的API，所以它就可以肆无忌惮的向M要求这要求那了。</p>
+<p>我们再来看看另外的一个绿色箭头，它是在C和V之间，和前一个绿色箭头的意义一样，它代表C可以直接地向V进行交流。你可以想想，C要把V放到屏幕上，并设置V的属性，告诉它们什么时候从屏幕上消失，把它们分成组等等。如果C不能自由的向V发号施令的话，程序的显示将会多么的困难,所以，C可以毫无限制地向V说话。 </p>
+<p>可能你已经注意到了，这个箭头上还有outlet(输出口)，outlet可以看作是从C指向V的指针，它在C中被定义。outlet给我们提供了很大的方便，它使我们在C的内部就可以轻松准确地向V施令。C可以拥有很多的outlet，可以不止一个，这也使它可以更高效的和V进行交流。</p>
+<p>那M和V之间可以交流么？还记得黄线的意思么？完全不可以通过，所以我们是不允许M和V进行交流的。这是因为我们不希望这三部分之间有过多的交流，你想想，假如V在显示时出现了问题，比如有一个图形没有显示出来，我们就要去查找错误，因为C可以和V交流，M也可以和V交流的话，我们就要去检查两个部分。相反的，只有C可以和V交流的话，在出错时，我们就只需要去C那里查找原因，这样查找错误不就很是简单了么？所以，我们不允许M和V之间有直接的联系，这也是在它们两之间有两根黄线的原因。</p>
+<p>好的应用程序要具备与用户交互的能力。如果没有良好的交互性，程序的功能将会受到很大的限制。在MVC中，V是和用户直接接触的，用户看不到M和C，所以，程序与用户的交互必须通过V来实现，但V只是视图而已，它并不能完全处理用户的要求，所以，这就要求V必须有某种手段来向C发送信息，移交用户的交互要求。这手段就是前面白色实线代表的过路费，你知道V不能知道C的一切，但它可以通过某种“手段”来和C进行交流，移交用户交互责任。</p>
+<p><strong>我们接下来讨论V是如何向C发送信息的。V对C的交流有三种不同的方式。</strong></p>
+<p>第一种我们称为目标操作(target-action)。它是这样工作的，C会在自己的内部“悬挂”一个目标(target)，如图中的红白相间的靶子，对应的，它还会分发一个操作(action，如图中的黄色箭头)给将要和它交流的视图对象(可能是屏幕上的一个按钮)，当按钮被按时，action就会被发送给与之对应的target，这样V就可以和C交流了。但是在这种情况下，V只是知道发送action给对应的target,它并不知道C中的类，也不知道它到底发送了什么。target-action是我们经常使用的方法。</p>
+<p>第二种方式我们叫做委托(delegate)。有时候，V需要和C进行同步，你知道，用户交互不仅仅是什么按按钮，划滑块，还有很多种形式。好了，让我们来看看图中的delegate黄色箭头，你发现箭头上又分出了四个小箭头：should，did，will，还有一个没标注的。绝大部分的delegate信息都是should，will，did这三种形式。和英文意思相对应，should代表视图对象将询问C中的某个对象“我应该这么做么？”，举个例子，有一个web视图，有人点击了一个链接，web视图就要问“我应该打开这个链接么？这样做安全么？”。这就是should信息。那will和did呢？will就是“我将要做这件事了”，did就是“我已经做了这件事”。C把自己设置为V的委托(delegate),它让V知道：如果V想知道更多的关于将如何显示的信息的话，就向C发送delegate信息。通过接受V发过来的delegate信息，C就会做出相应的协调和处理。还有一点，每个V只能有一个delegate。 </p>
+<p>第三种方式就是数据源(datasource)，你知道，V不能拥有它所要显示的数据，记住这点非常重要。V希望别人帮助它管理将要显示的数据，当它需要数据时，它就会请求别人的帮助,把需要的数据给它。再者，iphone的屏幕很小，它不能显示包含大量信息的视图。看图中的datasource箭头，和delegate类似，V会发送cout，data，at信息给C来请求数据。</p>
+<p>好了，这就是V给C发送信息的三种形式。</p>
+<p>最后一个问题。你看到M和C之间的白线，这意味着M不可以直接地，没有限制的对C进行交流。但有时，这个方向的交流是必要的。当M中的一些东西发生变化时，C需要了解这些变化，那我们怎么才能让C知道M的变化呢？通知（Notification）和KVO是解决问题的好方法。它们是这样工作的，当M中的某些东西发生变化时，他们会向C发出通知“嘿，老兄，注意了啊，我这发生变化了”，或者他们会发出指向变化的指针给C，或其他什么的。总之，他们的工作模式是这样的。</p>
+<h5 id="三、iOS中MVC使用Tips"><a href="#三、iOS中MVC使用Tips" class="headerlink" title="三、iOS中MVC使用Tips"></a>三、iOS中MVC使用Tips</h5><ol>
+<li><p>Model不允许和Controller，View打交道。也就是Model根本不知道谁会用自己，Model中不能有任何对Controller和View的引用。正所谓：Don’t call me, I will call you.就是给Model设计说的。我们再想想，在一般程序中Model到处被拿去用，它要维护到底谁用真的很难。那你会问：兄弟，那当Model的数据变了，我怎么通知视图更新呢？这里常用的机制就是广播模式，或者电台模式，或者事件机制都行。在iOS中有两种支持机制：Notification和KVO（Key-Value Observing）。这两种东西原理差不多，KVO是iOS中的一个核心概念，简单理解就是：关注Model某个数据（Key）的对象可以注册为监听器，一旦Model某个Key的Value发生变化，就会广播给所有的监听器。这和Flex，JavaFX中的绑定都是一个道理。</p>
+</li>
+<li><p>View不允许直接引用Controller和Model，它很专一地被Controller控制来进行数据的显示和接收用户的交互。我们知道View显示的时候需要数据，我们也知道在View上会产生事件。如果要达到不和Controller，Model直接打交道，就需要机制来支持。在Objective－C中有Protocol的东西，并且提出Delegate（代理模式）就是来解决UIView想和Controller松耦合互动问题的。除了这个外，iOS还提供了Action－Target模式来让Controller监听View的事件。那对View如何获得数据，iOS中提了Data Source的概念，其实也是Protocol的应用。</p>
+</li>
+<li><p>每一次推给用户的一个操作屏幕，最好都是MVC的三者组合，不要出现一组以上的MVC组合。</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/01/18/2014/iOS7适配坐标问题/" rel="prev" title="iOS7适配坐标问题">
+                iOS7适配坐标问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2013/09/13/2013/iOS里的MVC/"
+           data-title="iOS里的MVC" data-url="http://yoursite.com/2013/09/13/2013/iOS里的MVC/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars2.githubusercontent.com/u/11960955?v=3&s=460"
+               alt="keyzhang" />
+          <p class="site-author-name" itemprop="name">keyzhang</p>
+          <p class="site-description motion-element" itemprop="description">畅想❤️未来</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/KeyJohn" target="_blank" title="Github">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5180004352/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cxwlbj.com/" target="_blank" title="畅想未来">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  畅想未来
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、MVC的概念"><span class="nav-number">1.</span> <span class="nav-text">一、MVC的概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、M-V-C之间的交流模式"><span class="nav-number">2.</span> <span class="nav-text">二、M V C之间的交流模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三、iOS中MVC使用Tips"><span class="nav-number">3.</span> <span class="nav-text">三、iOS中MVC使用Tips</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">keyzhang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"KeyJohn"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
