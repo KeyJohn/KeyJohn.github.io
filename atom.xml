@@ -100,6 +100,99 @@
   </entry>
   
   <entry>
+    <title>iOS公司开发者账号申请图文教程</title>
+    <link href="http://yoursite.com/2016/03/05/2016/iOS%E5%85%AC%E5%8F%B8%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/"/>
+    <id>http://yoursite.com/2016/03/05/2016/iOS公司开发者账号申请图文教程/</id>
+    <published>2016-03-04T16:00:00.000Z</published>
+    <updated>2016-03-04T16:00:00.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;账号类型&quot;&gt;&lt;a href=&quot;#账号类型&quot; class=&quot;headerlink&quot; title=&quot;账号类型&quot;&gt;&lt;/a&gt;账号类型&lt;/h3&gt;&lt;p&gt;在申请苹果开发者账号之前，我们先应该弄懂开发者账号有哪几种类型。&lt;/p&gt;
+&lt;p&gt;先来一份苹果的官方说明：&lt;a href=&quot;https://developer.apple.com/support/compare-memberships/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;账号类型比较&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;从文档中我们不难看出，开发者账号分为个人(individual)、组织(Organizations)、教育机构(Educational Institutions)三种类型，其中组织类型又分为公司(Company)和企业(Enterprise)两种类型。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;账号间的区别&quot;&gt;&lt;a href=&quot;#账号间的区别&quot; class=&quot;headerlink&quot; title=&quot;账号间的区别&quot;&gt;&lt;/a&gt;账号间的区别&lt;/h3&gt;&lt;p&gt;其实在官方文档中已经提到了账号类型之间的区别了，在这里给大家做一个简单的阐述。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;个人开发者账号&lt;/strong&gt;：费用为99$/年，可以在AppStore上架，最大测试设备支持数100台，Store上应用开发商显示的是开发者自己的名字，不允许添加协作开发者。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;公司开发者账号&lt;/strong&gt;：费用为99$/年，可以在AppStore上架，最大测试设备支持数100台，Store上应用开发商显示的是公司的名字，可以添加协作开发者（拥有账号管理的的权限，给子账号设置管理权限）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;企业开发者账号&lt;/strong&gt;：费用为299$/年，不能在AppStore上架，只能企业内部应用，不限制设备数，可以添加协作开发者。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;注：教育机构类型的开发者账号一般工作中很少使用，有需要的朋友可以直接查看&lt;a href=&quot;https://developer.apple.com/education/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;公司开发者账号的申请&quot;&gt;&lt;a href=&quot;#公司开发者账号的申请&quot; class=&quot;headerlink&quot; title=&quot;公司开发者账号的申请&quot;&gt;&lt;/a&gt;公司开发者账号的申请&lt;/h3&gt;&lt;p&gt;个人开发者账号相对于其他两个类型的账号申请流程要简单一点，因为个人开发者账号不需要邓白氏编码（DUNS Number），而无论是公司还是企业的开发者账号申请都必须要邓白氏编码。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;邓白氏编码&lt;/strong&gt;：它是一个独一无二的9位数字全球编码系统，相当于企业的身份识别码 （就像是个人的身份证），被广泛应用于企业识别、商业信息的组织及整理。&lt;/p&gt;
+&lt;p&gt;可能大家会在网上看到很多代理申请邓白氏编码的广告，在这里我提醒大家，只要是公司第一次申请DUNS码，完全免费。接下来，我们一起来看一下申请公司开发者的流程（包括申请DUNS码）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;申请前先说明一点，所有需要填写内容的界面都必须用英文字母填写，不能出现中文，如果不知道英文意思就用拼音，切记！
+&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;准备材料：公司的详细英文名（没有就直接用拼音），地址，电话，联系人，Visa或Master银行卡。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先，进入到开发者的官网：&lt;a href=&quot;https://developer.apple.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://developer.apple.com/&lt;/a&gt;,在底部找到并点击&lt;em&gt;Developer Program&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/23136683.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;然后点击&lt;em&gt;Enroll&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/68715092.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在这个界面，苹果提示我们申请个人开发者账号和组织开发者账号分别需要准备哪些东西，可以看到个人账号值需要验证你的个人信息，而组织开发者账号就需要公司的信息和DUNS码。我们滑动到底部，点击&lt;em&gt;Start Your Enrollment&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/25380034.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;然后就是登陆你的AppleID和密码&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/79698615.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在这个界面我们能看到我们的AppleID的邮箱和名字，接着我们选择公司开发者账号类型。注意，当我们选择好公司类型的开发者账号后，在这个界面就会告诉我们需要哪些东西，我们在这里点击D-U-N-S Number 后面的&lt;em&gt;check&lt;/em&gt;，可以检查公司是否有注册过DUNS码&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/56439720.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/78846547.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;接着在这个界面，我们就需要填写公司的信息了，&lt;strong&gt;注意用英文！&lt;/strong&gt;填写的项目依次是：&lt;/p&gt;
+&lt;p&gt;Legal Entity Name —- 公司名称（这里一定要写全称，也就是注册公司时候的名字）&lt;/p&gt;
+&lt;p&gt;Tradestyle or DBA —- 公司的贸易方式（这个为可选项，最好不要填写）&lt;/p&gt;
+&lt;p&gt;Headquarters address of your company/organization — 公司总部的信息&lt;/p&gt;
+&lt;p&gt;Street Address — 街道&lt;/p&gt;
+&lt;p&gt;City/Town — 城市&lt;/p&gt;
+&lt;p&gt;State/Province — 省份&lt;/p&gt;
+&lt;p&gt;Postal Code — 邮政编码&lt;/p&gt;
+&lt;p&gt;Phone Number — 电话&lt;/p&gt;
+&lt;p&gt;Mailing address of your company/organization — 联系当前公司的信息，如果跟公司总部在一块，我们打上勾（跟总公司信息一样）&lt;/p&gt;
+&lt;p&gt;Your work contact information — 你的个人信息&lt;/p&gt;
+&lt;p&gt;Given Name — 名&lt;/p&gt;
+&lt;p&gt;Family Name — 姓&lt;/p&gt;
+&lt;p&gt;Job Title — 职位&lt;/p&gt;
+&lt;p&gt;Phone Number — 电话&lt;/p&gt;
+&lt;p&gt;Work Email — 工作邮箱&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/92747949.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/74558377.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;然后输入验证码，点击&lt;em&gt;continue&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;如果出现下面这个界面，就说明DB公司在数据库中没有找到你提交公司的D-U-N-S Number，提示你可以提交信息，申请新的D-U-N-S Number。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/50347380.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;提交完成后，你能够在邮箱中马上收到一封&lt;em&gt;dsmmssqladmin&lt;/em&gt;发来的邮件，注意，这个邮件中并没有D-U-N-S Number，没这么快，邮件只是提示你他们已经收到了你的请求，正在逐步审核提交的信息是否真实。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/97661550.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;等到大概一周左右（也许会没那么长，这得看DB公司忙不忙），会有苹果的工作人员通过电话联系你，&lt;strong&gt;不用担心，讲的是中文！&lt;/strong&gt;跟你核实公司的一些信息，然后会给你发一封邮件，让你填一些公司信息然后给他回过去就好了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/44672997.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;接着就慢慢等苹果给你回带D-U-N-S Number的邮件吧！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/32707191.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/71953074.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;到此处为止，我们的&lt;strong&gt;D-U-N-S Number&lt;/strong&gt;就已经申请完毕了。&lt;/p&gt;
+&lt;p&gt;接着回到我们当初在&lt;em&gt;check&lt;/em&gt;那个D-U-N-S的界面了，因为我们已经拿到D-U-N-S Number了，我们直接点击Continue进入到下个界面。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/8734569.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在这里我们把在申请D-U-N-S Number时候填写的公司名称等信息填上就可以了。然后继续，苹果就会告诉你申请流程正在处理中。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/4815206.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;处理完成后，苹果会给你发邮件，点击邮件中的链接直接进入，让你遵循苹果规定的开发者协议，然后让你完成付款。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/62450266.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/56545542.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/66891684.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;进入到付款界面，先让你登陆AppleID和密码，然后选择付款方式，这里只能用Visa卡或者是Master卡支付。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/12241695.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/57572230.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;付款成功以后，在回到你的开发者账号中心，就能看到已经变成公司开发者账号了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/38980873.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;由于是公司开发者账号类型，你可以添加其他AppleID子账号一起协作管理。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-16/19056745.jpg =800x0&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;至此，iOS公司开发者账号的申请流程就全部结束了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;账号类型&quot;&gt;&lt;a href=&quot;#账号类型&quot; class=&quot;headerlink&quot; title=&quot;账号类型&quot;&gt;&lt;/a&gt;账号类型&lt;/h3&gt;&lt;p&gt;在申请苹果开发者账号之前，我们先应该弄懂开发者账号有哪几种类型。&lt;/p&gt;
+&lt;p&gt;先来一份苹果的官方说明：&lt;a href=&quot;https://developer.apple.com/support/compare-memberships/&quot;&gt;账号类型比较&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;从文档中我们不难看出，开发者账号分为个人(individual)、组织(Organizations)、教育机构(Educational Institutions)三种类型，其中组织类型又分为公司(Company)和企业(Enterprise)两种类型。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>如何追踪app崩溃率，如何解决线上闪退</title>
     <link href="http://yoursite.com/2016/03/05/2016/%E5%A6%82%E4%BD%95%E8%BF%BD%E8%B8%AAapp%E5%B4%A9%E6%BA%83%E7%8E%87%EF%BC%8C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E7%BA%BF%E4%B8%8A%E9%97%AA%E9%80%80/"/>
     <id>http://yoursite.com/2016/03/05/2016/如何追踪app崩溃率，如何解决线上闪退/</id>
@@ -435,6 +528,37 @@ applicationWillTerminate:
     <summary type="html">
     
       &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>iOS小功能备忘----实现文字复制到粘贴板</title>
+    <link href="http://yoursite.com/2014/03/24/2014/%E5%AE%9E%E7%8E%B0%E6%96%87%E5%AD%97%E5%A4%8D%E5%88%B6%E5%88%B0%E7%B2%98%E8%B4%B4%E6%9D%BF/"/>
+    <id>http://yoursite.com/2014/03/24/2014/实现文字复制到粘贴板/</id>
+    <published>2014-03-23T16:00:00.000Z</published>
+    <updated>2014-03-23T16:00:00.000Z</updated>
+    
+    <content type="html">&lt;p&gt;今天，我们一起来学习在iOS中如何自定义将文字复制到粘贴板。&lt;/p&gt;
+&lt;p&gt;在iOS中有三个控件自身就有复制-粘贴的功能：UITextView、UITextField和UIWebView。在这里，我们自定义一个button简单地实现将label中的文字复制到粘贴板中。&lt;/p&gt;
+&lt;p&gt;首先创建一个工程，命名为CopyToClipboardDemo。打开工程，我们在storyboard中添加一个label和button，label中显示的是我们要复制的文字&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/32813540.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我们给button添加一个事件，代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (IBAction)copyBtnClick:(id)sender &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    UIPasteboard *appPasteBoard =  [UIPasteboard generalPasteboard];  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    appPasteBoard.persistent = YES;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    NSString *pasteStr =self.myCopyLabel.text;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [appPasteBoard setString:pasteStr];  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@&amp;quot;完成复制&amp;quot;,nil),nil] message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@&amp;quot;OK&amp;quot;,nil) otherButtonTitles:nil];  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [alertview show];  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;运行程序，点击copy按钮，切换到safari，在搜索条中长按后粘贴，就能将粘贴板中的文字复制过来了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/52854012.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/23831523.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;就这样，一个简单的小功能我们就实现了。当然，粘贴板的强大之处还有很多，这里只是最基本的一个用法而已，大家如果感兴趣可以到网上找找其他资料查阅。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天，我们一起来学习在iOS中如何自定义将文字复制到粘贴板。&lt;/p&gt;
+&lt;p&gt;在iOS中有三个控件自身就有复制-粘贴的功能：UITextView、UITextField和UIWebView。在这里，我们自定义一个button简单地实现将label中的文字复制到粘贴板中。&lt;/p&gt;
+&lt;p&gt;首先创建一个工程，命名为CopyToClipboardDemo。打开工程，我们在storyboard中添加一个label和button，label中显示的是我们要复制的文字&lt;/p&gt;
     
     </summary>
     

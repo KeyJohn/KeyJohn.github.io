@@ -80,15 +80,26 @@
 
 
 
-<meta name="description" content="畅想❤️未来">
-<meta property="og:type" content="website">
-<meta property="og:title" content="keyzhang">
-<meta property="og:url" content="http://yoursite.com/archives/2016/01/index.html">
+<meta name="description" content="今天，我们一起来学习在iOS中如何自定义将文字复制到粘贴板。
+在iOS中有三个控件自身就有复制-粘贴的功能：UITextView、UITextField和UIWebView。在这里，我们自定义一个button简单地实现将label中的文字复制到粘贴板中。
+首先创建一个工程，命名为CopyToClipboardDemo。打开工程，我们在storyboard中添加一个label和button，labe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS小功能备忘----实现文字复制到粘贴板">
+<meta property="og:url" content="http://yoursite.com/2014/03/24/2014/实现文字复制到粘贴板/index.html">
 <meta property="og:site_name" content="keyzhang">
-<meta property="og:description" content="畅想❤️未来">
+<meta property="og:description" content="今天，我们一起来学习在iOS中如何自定义将文字复制到粘贴板。
+在iOS中有三个控件自身就有复制-粘贴的功能：UITextView、UITextField和UIWebView。在这里，我们自定义一个button简单地实现将label中的文字复制到粘贴板中。
+首先创建一个工程，命名为CopyToClipboardDemo。打开工程，我们在storyboard中添加一个label和button，labe">
+<meta property="og:image" content="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/32813540.jpg">
+<meta property="og:image" content="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/52854012.jpg">
+<meta property="og:image" content="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/23831523.jpg">
+<meta property="og:updated_time" content="2014-03-23T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="keyzhang">
-<meta name="twitter:description" content="畅想❤️未来">
+<meta name="twitter:title" content="iOS小功能备忘----实现文字复制到粘贴板">
+<meta name="twitter:description" content="今天，我们一起来学习在iOS中如何自定义将文字复制到粘贴板。
+在iOS中有三个控件自身就有复制-粘贴的功能：UITextView、UITextField和UIWebView。在这里，我们自定义一个button简单地实现将label中的文字复制到粘贴板中。
+首先创建一个工程，命名为CopyToClipboardDemo。打开工程，我们在storyboard中添加一个label和button，labe">
+<meta name="twitter:image" content="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/32813540.jpg">
 
 
 
@@ -106,7 +117,7 @@
   };
 </script>
 
-  <title> 归档 | keyzhang </title>
+  <title> iOS小功能备忘----实现文字复制到粘贴板 | keyzhang </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -137,7 +148,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  page-archive  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -235,66 +246,135 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 17 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS小功能备忘----实现文字复制到粘贴板
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-03-24T00:00:00+08:00" content="2014-03-24">
+              2014-03-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/03/24/2014/实现文字复制到粘贴板/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/03/24/2014/实现文字复制到粘贴板/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <p>今天，我们一起来学习在iOS中如何自定义将文字复制到粘贴板。</p>
+<p>在iOS中有三个控件自身就有复制-粘贴的功能：UITextView、UITextField和UIWebView。在这里，我们自定义一个button简单地实现将label中的文字复制到粘贴板中。</p>
+<p>首先创建一个工程，命名为CopyToClipboardDemo。打开工程，我们在storyboard中添加一个label和button，label中显示的是我们要复制的文字</p>
+<a id="more"></a>
+<p><img src="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/32813540.jpg" alt=""></p>
+<p>我们给button添加一个事件，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- (IBAction)copyBtnClick:(id)sender &#123;  </span><br><span class="line">    UIPasteboard *appPasteBoard =  [UIPasteboard generalPasteboard];  </span><br><span class="line">    appPasteBoard.persistent = YES;  </span><br><span class="line">    NSString *pasteStr =self.myCopyLabel.text;  </span><br><span class="line">    [appPasteBoard setString:pasteStr];  </span><br><span class="line">      </span><br><span class="line">    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@&quot;完成复制&quot;,nil),nil] message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@&quot;OK&quot;,nil) otherButtonTitles:nil];  </span><br><span class="line">    [alertview show];  </span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行程序，点击copy按钮，切换到safari，在搜索条中长按后粘贴，就能将粘贴板中的文字复制过来了。</p>
+<p><img src="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/52854012.jpg" alt=""></p>
+<p><img src="http://7xlyxy.com1.z0.glb.clouddn.com/16-6-2/23831523.jpg" alt=""></p>
+<p>就这样，一个简单的小功能我们就实现了。当然，粘贴板的强大之处还有很多，这里只是最基本的一个用法而已，大家如果感兴趣可以到网上找找其他资料查阅。</p>
+
+      
+    </div>
+    
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/03/06/2014/轻松在mac上配置svn服务器/" rel="next" title="轻松在mac上配置svn服务器">
+                <i class="fa fa-chevron-left"></i> 轻松在mac上配置svn服务器
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/03/24/2014/mac显示隐藏文件命令/" rel="prev" title="Mac显示隐藏文件命令">
+                Mac显示隐藏文件命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/01/22/2016/去除云梯vpn提供的profile文件/" itemprop="url">
-              
-                <span itemprop="name">去除云梯VPN提供的profile文件</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-01-22T00:00:00+08:00"
-              content="2016-01-22" >
-          01-22
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -302,6 +382,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2014/03/24/2014/实现文字复制到粘贴板/"
+           data-title="iOS小功能备忘----实现文字复制到粘贴板" data-url="http://yoursite.com/2014/03/24/2014/实现文字复制到粘贴板/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -321,8 +409,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/11960955?v=3&s=460"
@@ -387,6 +484,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -490,11 +598,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
